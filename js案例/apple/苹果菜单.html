@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position:absolute;
+            bottom:0;
+            width:100%;
+            text-align:center;
+        }
+        img{width:64px;}
+    </style>
+    <script>
+        window.onload=function(){
+            var oBox = document.getElementById('box');
+            var aImg=oBox.getElementsByTagName('img');
+
+            document.onmousemove = function(ev){
+                var oEvent = ev || event;
+                for(var i=0; i<aImg.length; i++){
+                    var a=(aImg[i].offsetLeft+oBox.offsetLeft+aImg[i].offsetWidth/2) - oEvent.clientX;
+                    var b=(aImg[i].offsetTop + oBox.offsetTop + aImg[i].offsetTop/2) - oEvent.clientY;
+                    var c = Math.sqrt(a*a + b*b);
+                    var scale = 1 - c/500;
+                    if(scale<0.5)scale=0.5;
+                    aImg[i].style.width = scale*128 + 'px';
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <img src="img/1.png" alt="" />
+        <img src="img/2.png" alt="" />
+        <img src="img/3.png" alt="" />
+        <img src="img/4.png" alt="" />
+        <img src="img/5.png" alt="" />
+    </div>
+</body>
+</html>

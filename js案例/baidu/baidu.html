@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能社--http://www.zhinengshe.com</title>
+    <style>
+        div{
+            width: 270px;
+            height: 129px;
+            margin: 50px  auto;
+        }
+        *{ list-style:none; margin:0; padding:0;}
+        body{ text-align:center;}
+        #t1{ width:400px; height:30px; line-height:30px; font-size:20px;}
+        #ul1{ width:400px; margin:0 auto;}
+        #ul1 li{ width:400px; border-bottom:1px dashed #000; line-height:30px; height:30px; text-align:left;}
+        .on{
+            background: #ccc;
+            color: red;
+        }
+    </style>
+
+
+    <script src="js/jsonp.js"></script>
+    <script>
+
+
+        window.onload = function(){
+            var oT = document.getElementById('t1');
+            var oUl = document.getElementById('ul1');
+
+            var iNow = -1;
+            var oldValue = '';
+            oT.onkeyup = function(ev){
+                var oEvent = ev || event;
+                if(oEvent.keyCode == 40 || oEvent.keyCode == 38){return;}
+                if(oEvent.keyCode==13){
+                    window.open('https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd='+oT.value+'&rsv_pq=a96f920f000469d5&rsv_t=3759cLGPrjsTo94t0To%2Fwwd4ou2cB5sOzwkAeQEWwURJMlCf5%2BtA5F76Bqs&rqlang=cn&rsv_enter=1&rsv_sug3=2&rsv_sug1=2&rsv_sug7=100&rsv_sug2=0&inputT=1310&rsv_sug4=1310');
+                }
+
+                jsonp({
+                    url:'http://suggestion.baidu.com/su',
+                    data:{
+                        wd:oT.value
+                    },
+                    cbName:'cb',
+                    success:function(data){
+                         oUl.innerHTML = '';
+                         for(var i = 0; i < data.s.length; i++){
+                            var oLi = document.createElement('li');
+                            oLi.innerHTML = data.s[i];
+
+                            oUl.appendChild(oLi);
+                         }
+                    }
+                });
+
+                oldValue = oT.value;
+
+            }
+
+            oT.onkeydown = function(ev){
+                var oEvent  = ev || event;
+                var aLi = oUl.children;
+                //38  上  40 下
+                if(oEvent.keyCode == 40){
+                    iNow++;
+                    if(iNow==aLi.length){
+                        iNow=-1;
+                    }
+
+                    for(var i = 0; i < aLi.length;i++)
+                    {
+                        aLi[i].className = '';
+                    }
+
+
+                    document.title = oldValue;
+                    if(iNow==-1){
+                        oT.value = oldValue;
+                    }else{
+                        oT.value = aLi[iNow].innerHTML;
+                        aLi[iNow].className = 'on';
+                    }
+
+
+                }
+                if(oEvent.keyCode == 38){
+                    iNow--;
+                    if(iNow==-2){iNow=aLi.length-1;}
+                    for(var i = 0; i < aLi.length;i++)
+                    {
+                        aLi[i].className = '';
+                    }
+
+
+                    document.title = oldValue;
+                    if(iNow==-1){
+                        oT.value = oldValue;
+                    }else{
+                        oT.value = aLi[iNow].innerHTML;
+                        aLi[iNow].className = 'on';
+                    }
+                }
+            }
+        };
+    </script>
+
+</head>
+<body>
+<div>
+    <img hidefocus="true" src="img/bd_logo1.png" width="270" height="129"></div>
+
+
+<input type="text" id="t1">
+<ul id="ul1">
+</ul>
+
+
+
+</body>
+</html>

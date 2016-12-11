@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            background:#ccc;
+            float:left;
+            position:relative;
+            overflow:hidden;
+            margin:10px;
+        }
+        li{
+            position:absolute;
+            left:0;
+            top:-200px;
+            width: 200px;
+            height: 200px;
+            background:#6cf;
+        }
+    </style>
+    <script src="js/move.js"></script>
+    <script>
+        function getDir(obj,ev){
+            var x = obj.offsetLeft + obj.offsetWidth/2 - ev.clientX;
+            var y = obj.offsetTop + obj.offsetHeight/2 - ev.clientY;
+            return Math.round((Math.atan2(y,x)*180/Math.PI+180)/90)%4;
+        }
+        function through(obj){
+            var oLi=obj.children[0];
+            obj.onmouseenter=function(ev){
+                var oEvent = ev || event;
+                var dir = getDir(obj,oEvent);
+
+                switch(dir){
+                    case 0:
+                        oLi.style.left = '200px';
+                        oLi.style.top = 0;
+                        break;
+                    case 1:
+                        oLi.style.left=0;
+                        oLi.style.top='200px';
+                        break;
+                    case 2:
+                        oLi.style.left='-200px';
+                        oLi.style.top=0;
+                        break;
+                    case 3:
+                        oLi.style.left=0;
+                        oLi.style.top = '-200px';
+                        break;
+                }
+                move(oLi,{left:0,top:0});
+            };
+            obj.onmouseleave = function(ev){
+                var oEvent = ev || event;
+                var dir = getDir(obj,oEvent);
+                switch(dir){
+                    case 0:
+                        move(oLi,{left:200,top:0});
+                        break;
+                    case 1:
+                        move(oLi,{left:0,top:200});
+                        break;
+                    case 2:
+                        move(oLi,{left:-200,top:0});
+                        break;
+                    case 3:
+                        move(oLi,{left:0,top:-200});
+                }
+            };
+        }
+        window.onload=function(){
+            var aUl = document.getElementsByTagName('ul');
+            for(var i=0; i<aUl.length; i++){
+                through(aUl[i]);
+            }
+        };
+
+    </script>
+</head>
+<body>
+<ul>
+    <li></li>
+</ul>
+
+<ul>
+    <li></li>
+</ul>
+
+<ul>
+    <li></li>
+</ul>
+
+<ul>
+    <li></li>
+</ul>
+
+<ul>
+    <li></li>
+</ul>
+
+<ul>
+    <li></li>
+</ul>
+
+<ul>
+    <li></li>
+</ul>
+
+<ul>
+    <li></li>
+</ul>
+<ul>
+    <li></li>
+</ul>
+
+<ul>
+    <li></li>
+</ul>
+<ul>
+    <li></li>
+</ul>
+
+<ul>
+    <li></li>
+</ul>
+</body>
+</html>

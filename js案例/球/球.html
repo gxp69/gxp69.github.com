@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0042)http://xblue.github.io/football/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+.wrap{ width:250px; margin:0 auto;}
+#div1 {width:250px; background:url(images/qiu.png) no-repeat; background:url(images/qiu1.png) no-repeat; height:250px; position:absolute; overflow:hidden; z-index:10;}
+#div2 div{width:250px; background:url(images/qiu.png) no-repeat; background:url(images/qiu1.png) no-repeat; height:250px; position:absolute;}
+</style>
+
+<title>无标题文档</title>
+<script type="text/javascript">
+var aDiv=null;
+var timer=null;
+var l=0;
+var t=0;
+var lastX=0;
+var lastY=0;
+var iSpeedX=0;
+var iSpeedY=0;
+
+
+function drag(obj,aDiv)
+{
+  obj.onmousedown=function(ev)
+  {
+    var oEvent=ev||event;
+	
+	var disX=oEvent.clientX-obj.offsetLeft;
+	
+	var disY=oEvent.clientY-obj.offsetTop;
+	
+	if(obj.setCapture)
+	{
+	  obj.onmousemove=fnMove;
+	  obj.onmouseup=fnUp;
+	  obj.setCapture();
+	}
+	else
+	{
+	  document.onmousemove=fnMove;
+	  document.onmouseup=fnUp;
+	}
+	
+	//
+	clearInterval(timer);
+	return false;
+	
+	function fnMove(ev)
+	{
+	  var oEvent=ev||event;
+	  
+	  var x=oEvent.clientX-disX;
+	  
+	  var y=oEvent.clientY-disY;
+	  
+	  var windowWidth=document.documentElement.clientWidth;
+	  
+	  var windowHeight=document.documentElement.clientHeight;
+	  
+	  if(x<0){x=0};
+	  
+	  if(x>windowWidth-obj.offsetWidth){x=windowWidth-obj.offsetWidth};
+	  
+	  if(y<0){y=0};
+	  
+	  if(y>windowHeight-obj.offsetHeight){y=windowHeight-obj.offsetHeight};
+	  
+	  gensui(obj,aDiv,x,y);
+
+	  iSpeedX=x-lastX;
+	  iSpeedY=y-lastY;
+	  
+	  lastX=x;
+	  lastY=y;
+	}
+	
+	function fnUp()
+	{
+	  this.onmousemove=null;
+	  this.onmouseup=null;
+	  if(this.releaseCapture)
+	  {
+	    this.releaseCapture();
+	  }
+	  
+	  startMove(obj);
+	}
+  }
+}
+
+function gensui(oParent,aChildren,left,top)
+{
+	  for (var i=aChildren.length-1;i>0;i--)
+	  {  
+		 aChildren[i].style.left=aChildren[i-1].offsetLeft+'px';
+		 aChildren[i].style.top=aChildren[i-1].offsetTop+'px';
+	  }
+	  aChildren[0].style.left=oParent.style.left=left+'px';
+	  aChildren[0].style.top=oParent.style.top=top+'px';
+}
+
+function startMove(obj)
+{
+  clearInterval(timer);
+  timer=setInterval(function(){
+     
+	 iSpeedY+=3;
+	 
+	 l=obj.offsetLeft+iSpeedX;
+	 t=obj.offsetTop+iSpeedY;
+	 
+	 if(l<0)
+	 {
+	   iSpeedX*=-0.7;
+	   l=0;
+	 }
+	 else if(l>document.documentElement.clientWidth-obj.offsetWidth)
+	 {
+	   iSpeedX*=-0.7;
+	   l=document.documentElement.clientWidth-obj.offsetWidth;
+	 }
+	 else if(t<0)
+	 {
+	   iSpeedY*=-0.7;
+	   iSpeedX*=0.7;
+	   t=0;
+	 }
+	 else if(t>document.documentElement.clientHeight-obj.offsetHeight)
+	 {
+	   iSpeedY*=-0.7;
+	   iSpeedX*=0.7;
+	   t=document.documentElement.clientHeight-obj.offsetHeight;
+	 }
+	 
+	 if(Math.abs(iSpeedX)<1)
+	 {
+	   iSpeedX=0;
+	 }
+	 
+	 if(Math.abs(iSpeedY)<1)
+	 {
+	   iSpeedY=0;
+	 }
+	 
+	 if(iSpeedX==0&&iSpeedY==0&&t==document.documentElement.clientHeight-obj.offsetHeight)
+	 {
+	   clearInterval(timer);
+	 }
+	 else
+	 {
+	   obj.style.left=l+"px";
+	   obj.style.top=t+'px';
+	   gensui(obj,aDiv,l,t);
+	 }
+	 
+  },30)
+}
+
+window.onload=function()
+{
+  var oDiv=document.getElementById("div1");
+  
+  aDiv=document.getElementById("div2").getElementsByTagName("div");
+  
+  for (var i=0;i<aDiv.length;i++)
+  {
+    aDiv[i].style.opacity=(10-i)*7/100;
+	aDiv[i].style.filter="alpha(opacity="+(10-i)*7+")";
+  }
+
+  drag(oDiv,aDiv);
+  
+  startMove(oDiv)
+}
+</script>
+</head>
+
+<body>
+<div class="wrap">
+<div id="div1" style="left: 625.965px; top: 338px;"></div>
+<div id="div2">
+<div style="opacity: 0.7; left: 625.965px; top: 338px;"></div>
+<div style="opacity: 0.63; left: 628px; top: 338px;"></div>
+<div style="opacity: 0.56; left: 631px; top: 338px;"></div>
+<div style="opacity: 0.49; left: 635px; top: 338px;"></div>
+<div style="opacity: 0.42; left: 641px; top: 338px;"></div>
+<div style="opacity: 0.35; left: 649px; top: 338px;"></div>
+<div style="opacity: 0.28; left: 657px; top: 338px;"></div>
+<div style="opacity: 0.21; left: 669px; top: 335px;"></div>
+<div style="opacity: 0.14; left: 681px; top: 333px;"></div>
+<div style="opacity: 0.07; left: 693px; top: 334px;"></div>
+<div style="opacity: 0; left: 705px; top: 338px;"></div>
+<div style="opacity: -0.07; left: 722px; top: 331px;"></div>
+<div style="opacity: -0.14; left: 739px; top: 323px;"></div>
+<div style="opacity: -0.21; left: 756px; top: 318px;"></div>
+</div>
+</div>
+
+
+</body></html>

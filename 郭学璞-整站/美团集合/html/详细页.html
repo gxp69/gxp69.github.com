@@ -1,0 +1,668 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>详细页</title>
+<link href="../css/base.css" rel="stylesheet"/>
+<link href="../css/详细页.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="header">
+		<div class="warp header_a clearfix">
+			<ul class="fl header_l">
+				<li class="fl">
+					<a href="../首页.html">美团</a>
+				</li>
+				</li>
+				<li class="fl li1">
+					<a href="登陆.html">登录</a>
+				</li>
+				<li class="fl li2">
+					<a href="邮箱.html">注册</a>
+				</li>
+				<li class="fl li3">
+					<a href="手机.html"><b class="fl b1"></b>手机美团<b class="fr b2"></b></a>
+				</li>
+			</ul>
+			<ul class="fr header_2">
+				<li class="fl">
+					<a href="#">我的订单</a>
+				</li>
+				<li class="fl li2">
+					<a href="#">我的美团<b class="fr b2"></b></a>
+				</li>
+				<li class="fl li2">
+					<a href="#">最近浏览<b class="fr b2"></b></a>
+				</li>
+				<li class="fl li2">
+					<a href="#"><b class="fl b3"></b>购物车<b class="fr b2"></b></a>
+				</li>
+				<li class="fl li2">
+					<a href="#">联系客服<b class="fr b2"></b></a>
+				</li>
+				<li class="fl li2">
+					<a href="#">我是商家<b class="fr b2"></b></a>
+				</li>
+				<li class="fl">
+					<a href="#">更多<b class="fr b2"></b></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="warp clearfix guanggao" id="gg">
+		<img src="../imgs/gg.jpg" alt="" />
+		<input type="button" value="X" onclick="p1()">
+	</div>
+	<div class="warp search clearfix">
+		<div class="search_h fl">
+			<h1 class="fl"><a href="#" class="fl">美团</a></h1>
+			<span class="fl">北京</span>
+			<a href="#" class="fl qiehuan">切换城市</a>
+		</div>
+		<div class="search_c fl">
+			<div class="search_ss fl">
+				<select class="fl">
+					<option>团购</option>
+					<option>商家</option>
+				</select>
+				<input type="text" name="" value="输入商品名称、地址等" class="fl txt">
+				<input type="button" value="搜索" class="fr btn" name="">
+			</div>
+			<div class="fl search_bottom">
+				<a href="#">电影</a>
+				<a href="#">自助餐</a>
+				<a href="#">KTV</a>
+				<a href="#">生日蛋糕</a>
+				<a href="#">烤肉</a>
+				<a href="#">烤鱼</a>
+				<a href="#">按摩</a>
+				<a href="#">汉丽轩</a>
+				<a href="#">电影票</a>
+				<a href="#">蛋糕</a>
+			</div>
+		</div>
+		<div class="clearfix search_r fr">
+			<ul>
+				<li class="fl">
+					<img src="../imgs/tui.jpg">
+					<a href="#" class="">随时退</a>	
+				</li>
+				<li class="fl">
+					<img src="../imgs/bt4.jpg">
+					<a href="#" class="">不满意免单</a>	
+				</li>
+				<li class="fl">
+					<img src="../imgs/bt5.jpg">
+					<a href="#" class="">过期退</a>	
+				</li>
+			</ul>	
+		</div>
+	</div>
+
+	<div class="q warper">
+    	<div class="saoma" id="none">
+        	<img src="../imgs/6.jpg" alt="" class="image"/>
+            <input type="button" name="button" value="&times;" onclick="document.getElementById('none').style.display='none'" />
+        </div>
+    	<div class="q_top clearfix">
+        	<div class="q_top_left fl">
+            	<a href="#">全部分类<i class="fr"></i></a>
+                <div class="q_top_left_content">
+                	
+                </div>
+            </div>
+            <div class="q_top_right fl">
+            	<ul class="clearfix">
+                	<li class="fl"><a href="#">首页</a></li>
+                    <li class="fl"><a href="#">身边团购</a></li>
+                    <li class="fl"><a href="#">身边外卖</a></li>
+                    <li class="fl"><a href="#">今日新单</a></li>
+                    <li class="fl"><a href="#">购物</a></li>
+                    <li class="fl"><a href="#">商家点评</a></li>
+                    <li class="fl"><a href="#">大牌街</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="q_add">
+        	<ul class="clearfix">
+            	<li class="fl"><a href="#">北京团购</a><i>&raquo;</i></li>
+                <li class="fl"><a href="#">美食团购</a><i>&raquo;</i></li>
+                <li class="fl"><a href="#">烧烤烤肉</a><i>&raquo;</i></li>
+                <li class="fl"><a href="#">丰台区</a><i>&raquo;</i></li>
+                <li class="fl"><a href="#">方庄/蒲黄榆</a><i>&raquo;</i></li>
+                <li class="fl"><a href="#" class="last">燕京啤酒花园</a></li>
+            </ul>
+        </div>
+        <div class="q_content">
+        	<h2>
+            	<a href="#">【方庄/蒲黄榆】燕京啤酒花园</a>
+            </h2>
+            <p class="abstract">仅售19.8元！价值68元的红烧金枪鱼块1份，提供免费WIFI。中国水产直供超低温金枪鱼。盛夏消暑撸串圣地，就在燕京啤酒花园</p>
+            <ul class="clearfix">
+            	<li class="fl q_content_ul_p">
+                	<div>
+                    	<img src="../imgs/12.jpg" width="460" height="280" alt="" />
+                        <i class="d"></i>
+                        <i class="j"></i>
+                        <i class="m"></i>
+                    </div>
+                    <a href="#"><img src="../imgs/1.jpg" width="78" height="45" alt="" /></a>
+                </li>
+                <li class="fl q_content_ul_c">
+                	<div class="price clearfix">
+                    	<h3 class="fl">
+                            <span>&yen;</span><b>19.8</b>
+                        </h3>
+                        <span class="fl">
+                        	<p class="p1">2.9折</p>
+                            <p class="p2">&yen;68</p>
+                        </span>
+                    </div>
+                    <div class="sale clearfix">
+                    	<p class="fl p1">
+                        	已售<span>100</span>
+                        </p>
+                        <p class="fl p2 clearfix">
+                        	<span class="fl">100</span>人评价，暂无评分<i class="fr">？</i>
+                        </p>
+                    </div>
+                    <div class="merchant">
+                    	<table>
+                        	<tbody>
+                            	<tr>
+                                	<td width="70">商家</td>
+                                    <td width="256" class="add"><span>燕京啤酒花园（体育公园附近哈哈哈哈哈啊哈）</span><a href="#">查看地址/电话</a></td>
+                                </tr>
+                                <tr>
+                                	<td>有效期</td>
+                                    <td class="time">截止到2014.09.29<span>周末、法定节假日通用</span></td>
+                                </tr>
+                                <tr>
+                                	<td>使用时间</td>
+                                    <td>17：30至次日02：00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#" class="huafei clearfix">
+                        	<span class="fl">手机可用积分抵10元</span><i class="fl"></i><b class="fl"></b>
+                        </a>
+                    </div>
+                    <form action="" method="post">
+                    	<ul class="meal clearfix">
+                        	<li class="l1 fl">套餐</li>
+                            <li class="l2 fl">
+                            	2-8人餐30元
+                                <img src="../imgs/1.png" width="88" height="31" alt="" />
+                            </li>
+                            <li class="l3 fl">
+                            	2-8人餐19.8元
+                            	 <img src="../imgs/1.png" alt="" />
+                            </li>
+                        </ul>
+                        <div class="num">
+                        	<span class="left">数量</span>
+                            <span>
+                            	<i>-</i>
+                                <b>1</b>
+                                <i>+</i>
+                            </span>
+                        </div>
+                        <div class="btn">
+                        	<input type="button" name="button1" value="&radic;&nbsp;&nbsp;立即抢购" class="like" />
+                            <input type="button" name="button2" value="加入购物车" class="shopcar" />
+                            <a href="#"><i></i>收藏<span>（1）</span></a>
+                            <a href="#"><b></b>分享到</a>
+                        </div>	
+                    </form>
+                    <ul class="serve clearfix">
+                    	<li class="fl first"><a href="#">服务承诺</a></li>
+                        <li class="fl"><a href="#"><i class="i1"></i>随时退</a></li>
+                        <li class="fl"><a href="#"><i class="i2"></i>过期退</a></li>
+                        <li class="fl"><a href="#"><i class="i3"></i>极速退</a></li>
+                        <li class="fl"><a href="#"><i class="i4"></i>真实评价</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!------------------------------上半页------------------------------------>
+	<div class="p_box warp clearfix">
+    	<div class="p_left">
+        	<div class="p_shangjia">
+            	<h2>商家位置</h2>
+                <div class="p_bot clearfix">
+                	<div class="p_lt">
+                    	<img src="../imgs/ditu.jpg" alt=""/>
+                        <p class="clearfix">
+                        <i></i>
+                        <a href="#">查看完整地图</a>
+                        </p>
+                    </div>
+                    <div class="p_rt">
+                    	<h3>燕京啤酒花园（体育公园店）</h3>
+                        <p class="p_p1 clearfix">
+                        	<b>商家积累评分：</b>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <span>暂无评分</span>
+                        </p>
+                        <p class="p_p1 clearfix">
+                        	<b class="p_b1">地址：</b>
+                            <span class="p_span">丰田区方庄地区铺方璐7号（方庄环岛北100米方庄体育公园东门）</span>
+                        </p>
+                        <a class="p_a1" href="#">查看地图</a>
+                        <a class="p_a2" href="#">公交/驾车去这里</a>
+                        <p class="p_p1 clearfix">
+                        	<b class="p_b1">地铁：</b>
+                            <span class="p_span">距离黄埔站约734米</span>
+                        </p>
+                        <p class="p_p1 clearfix">
+                        	<b class="p_b1">电话：</b>
+                            <span class="p_span">18600682488</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!----------------商家---------------->
+            <div class="p_goumai">
+            	<h2>购买须知</h2>
+                <table>
+                	<tbody>
+                    	<tr>
+                        	<td class="p_td1">有效期</td>
+                            <td class="p_t">2014.7.31至2014.9.29（周末、法定节假日通用）</td>
+                        </tr>
+                        <tr>
+                        	<td class="p_td1">使用时间</td>
+                            <td class="p_t">17:30-次日02:00</td>
+                        </tr>
+                        <tr>
+                        	<td class="p_td1">预约提醒</td>
+                            <td class="p_t">无需预约，消费高峰时可能需要等位</td>
+                        </tr>
+                        <tr>
+                        	<td class="p_td1">限购限用提醒</td>
+                            <td class="p_t">每张美团券建议2至8人使用</td>
+                        </tr>
+                        <tr>
+                        	<td class="p_td1">其他费用</td>
+                            <td class="p_t">茶位费：无</td>
+                        </tr>
+                        <tr>
+                        	<td class="p_td1">包间</td>
+                            <td class="p_t">店内无包间</td>
+                        </tr>
+                        <tr>
+                        	<td class="p_td1">堂食外带</td>
+                            <td class="p_t">堂食外带均可，可免费打包</td>
+                        </tr>
+                        <tr>
+                        	<td class="p_td1">温馨提示</td>
+                            <td class="p_t">团队用户不可同时享受商家其他优惠 <br />团队用户不可同时享受商家其他优惠团队用户不可同时享受商家其他优惠团队用户不可同时享受商家其他优惠团队用户不可同时享受商家其他优惠团队用户不可同时享受商家其他优惠团队用户不可同时享受商家其他优惠团队用户不可同时享受商家其他优惠团队用户不可同时享受商家其他优惠团队用户不可同时享受商家其他优惠</td>
+                        </tr>
+                        <tr>
+                        	<td class="p_td1">商家服务</td>
+                            <td class="p_t">提供免费WiFi<br /> 免费提供20个停车位</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!----------------购买---------------->  
+            <div class="p_bendan">
+            	<h2>本单详情</h2>
+                <p class="p_p1">美味尽享</p>
+          		<table>
+                	<tbody>
+                    	<tr class="p_tr1">
+                        	<td class="p_td11">套餐内容</td>
+                            <td class="p_td11"></td>
+                            <td class="p_td11">单价</td>
+                            <td class="p_td11">数量/规格</td>
+                            <td class="p_td11 p_td5">小计</td>
+                        </tr>
+                        <tr class="p_tr2">
+                        	<td class="p_td1">荤菜</td>
+                            <td class="p_td2">红烧金枪鱼</td>
+                            <td class="p_td3">¥68</td>
+                            <td class="p_td4">1份</td>
+                            <td class="p_td5">¥68</td>
+                        </tr>
+                        <tr class="p_tr3">
+                        	<td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="p_td4">价格：¥68</td>
+                            <td class="p_td5">美团价：¥<span>19.8</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="p_p2 clearfix"><i></i><b>免费提供餐巾纸</b></p>
+                <p class="p_p1 p_p3">美团推荐</p>
+                <p class="p_p4"><strong>红烧金枪鱼块：</strong><span>红烧做法金枪鱼</span></p>
+                <img src="../imgs/jinyu.jpg" alt=""/>
+            </div> 
+            <!----------------本单----------------> 
+            <div class="p_jieshao">
+            	<h2>商家介绍</h2>
+                <p class="p_p1">燕京啤酒花园</p> 
+                <img class="p_im1" src="../imgs/yanjing.jpg" alt="">
+                <p class="p_p2">京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花京啤酒花</p>
+                <img class="p_im2" src="../imgs/yanjing1.jpg" alt=""/>
+                <img class="p_im2" src="../imgs/yanjing1.jpg" alt=""/>
+                <img class="p_im2" src="../imgs/yanjing1.jpg" alt=""/>
+                <img class="p_im2" src="../imgs/yanjing1.jpg" alt=""/>
+                <img class="p_im2 p_im3" src="../imgs/yanjing1.jpg" alt=""/>
+            </div> 
+            <!----------------介绍---------------->
+            <div class="p_pingjia">
+            	<h3 class="clearfix">
+                	<p class="p_p1">消费评价</p>
+                    <p class="p_p2">我买过本单，<span>我要评价</span></p>
+                </h3>
+                <p class="p_p3">暂无消费评价</p>
+                <div class="p_div clearfix">
+                	<span>全部评价</span>
+                    <div class="p_rt">
+                        <input type="checkbox" id="p_tu"/>
+                        <label for="p_tu">有图片</label>
+                        <input type="checkbox" id="p_nei"/>
+                        <label for="p_nei">有内容的评价</label>
+                        <a class="p_a1" href="#">默认</a>
+                        <a class="p_a2" href="#">按时间<i></i></a>
+                    </div>
+                </div>
+                <p class="p_p4">暂无该类型评价</p>
+                <div class="p_div1 clearfix">
+                	<span class="p_sp"><i>¥</i>19.8</span>
+                    <div class="p_sp1"><p class="p_hui">门店价</p><p class="p_de">¥66</p></div>
+                    <div class="p_sp1"><p class="p_hui">折扣</p><p> 2.9折</p></div>
+                    <div class="p_sp1"><p class="p_hui">已售</p><p>0</p></div>
+                    <div class="p_bot">
+                        <input class="p_b1" type="button" value="抢购" />
+                        <input class="p_b2" type="button" value="加入购物车" />
+                    </div>
+                </div>
+            </div>
+            <!----------------评价----------------> 
+            <div class="p_ni">
+            	<h3>你可能感兴趣的新品团购</h3>
+                <div class="p_box1 clearfix">
+                    <div class="p_box2">
+                    	<img src="../imgs/gong.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <span>已售2011</span>
+                        </p>
+                    </div>
+                    <div class="p_box2">
+                    	<img src="../imgs/gong.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <span>已售2011</span>
+                        </p>
+                    </div>
+                </div>
+            </div>  
+            <img class="p_ig" src="../imgs/sao.jpg" alt="" /> 
+        </div>
+        <!----------------------左边----------------------------------------->
+    	<div class="p_right">
+        	<div class="p_re">
+            	<h2 class="clearfix">
+                	<span>热门专题</span>
+                    <div class="p_an">
+                    	<a href="#" class="p_in"><</a>
+                        <a href="#">></a>
+                    </div>
+                </h2>
+                <img src="../imgs/chi.jpg" alt="" />
+            </div>
+            <!----------热门---------------->
+            <div class="p_da">
+            	<h3>美团答疑</h3>
+                <i></i>
+                <a href="#">本单答疑</a>
+                <a class="p_a1" href="#">我要提问</a>
+            </div>
+            <!----------答疑---------------->
+            <div class="p_qita">
+            	<h3></h3>
+                <div class="p_box2">
+                    	<img src="../imgs/yuan.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨提工坊劲爆</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <b>门店价</b>
+                            <em>¥42</em>
+                            <span>已售<strong>2011</strong></span>
+                        </p>
+                 </div>
+                 <div class="p_box2">
+                    	<img src="../imgs/yuan.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨提工坊劲爆</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <b>门店价</b>
+                            <em>¥42</em>
+                            <span>已售<strong>2011</strong></span>
+                        </p>
+                 </div>
+                 <div class="p_box2">
+                    	<img src="../imgs/yuan.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨提工坊劲爆</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <b>门店价</b>
+                            <em>¥42</em>
+                            <span>已售<strong>2011</strong></span>
+                        </p>
+                 </div>
+                 <div class="p_box2">
+                    	<img src="../imgs/yuan.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨提工坊劲爆</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <b>门店价</b>
+                            <em>¥42</em>
+                            <span>已售<strong>2011</strong></span>
+                        </p>
+                 </div>
+                 <div class="p_box2">
+                    	<img src="../imgs/yuan.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨提工坊劲爆</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <b>门店价</b>
+                            <em>¥42</em>
+                            <span>已售<strong>2011</strong></span>
+                        </p>
+                 </div>
+                 <div class="p_box2">
+                    	<img src="../imgs/yuan.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨提工坊劲爆</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <b>门店价</b>
+                            <em>¥42</em>
+                            <span>已售<strong>2011</strong></span>
+                        </p>
+                 </div>
+                 <div class="p_box2">
+                    	<img src="../imgs/yuan.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨提工坊劲爆</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <b>门店价</b>
+                            <em>¥42</em>
+                            <span>已售<strong>2011</strong></span>
+                        </p>
+                 </div>
+                 <div class="p_box2 p_box3">
+                    	<img src="../imgs/yuan.jpg" alt="" />
+                        <p>【11店通用】莫提供方：磨提工坊劲爆</p>
+                        <p class="p_p1">提工坊劲爆来袭斯蒂芬是否</p>
+                        <p class="p_p2">
+                        	<i>¥29.7</i>
+                            <b>门店价</b>
+                            <em>¥42</em>
+                            <span>已售<strong>2011</strong></span>
+                        </p>
+                 </div>
+            </div>
+            <!----------其他---------------->
+            <div class="p_zui">
+            	<h4 class="clearfix">
+                	<span>最近浏览</span>
+                    <a href="#">清空</a>
+                </h4>
+                <div class="p_bom clearfix">
+                	<img src="../imgs/pica.jpg" alt="" />
+                    <p class="p_pt">Laker's人披萨西餐</p>
+                    <p>
+                    	<i>¥58</i>
+                        <b>148</b>
+                    </p>
+                </div>
+                <div class="p_bom clearfix">
+                	<img src="../imgs/pica.jpg" alt="" />
+                    <p class="p_pt">Laker's人披萨西餐</p>
+                    <p>
+                    	<i>¥58</i>
+                        <b>148</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<body>
+	<div class="footer">
+    	<div class="bq clearfix">
+        	<ul>
+            	<li class="bq1"><a href="#">获取更新</a></li>
+                <li><a href="#"><b></b>邮件订阅</a></li>
+                <li><a href="#"><b></b>iPhone/Android</a></li>
+                <li><a href="#"><b></b>美团QQ空间</a></li>
+                <li><a href="#"><b></b>美团新浪微博</a></li>
+                <li><a href="#"><b></b>sitemap</a></li>
+                <li><a href="#"><b></b>RSS订阅</a></li>
+            </ul>
+            <ul>
+            	<li class="bq1"><a href="#">商务合作</a></li>
+                <li><a href="#"><b></b>提供团购信息</a></li>
+                <li><a href="#"><b></b>提供商家营销平台</a></li>
+                <li><a href="#"><b></b>市场合作</a></li>
+                <li><a href="#"><b></b>美团联盟</a></li>
+                <li><a href="#"><b></b>廉正邮箱</a></li>
+                <li class="bq2"><a href="#">lianzheng@meituan.com</a></li>
+            </ul>
+            <ul>
+            	<li class="bq1"><a href="#">公司信息</a></li>
+                <li><a href="#"><b></b>关于美团</a></li>
+                <li><a href="#"><b></b>美团承诺</a></li>
+                <li><a href="#"><b></b>媒体报道</a></li>
+                <li><a href="#"><b></b>加入我们</a></li>
+                <li><a href="#"><b></b>法律声明</a></li>
+                <li><a href="#"><b></b>用户协议</a></li>
+                
+            </ul>
+            <ul>
+            	<li class="bq1"><a href="#">用户帮助</a></li>
+                <li><a href="#"><b></b>申请退款</a></li>
+                <li><a href="#"><b></b>查看美团券密码</a></li>
+                <li><a href="#"><b></b>常见问题</a></li>
+                <li><a href="#"><b></b>开放API</a></li>
+                <li><a href="#"><b></b>美团云</a></li>
+                <li><a href="#"><b></b>返诈骗公告</a></li>
+                
+            </ul>
+             <ul class="bq3">
+            	<li class="bq1"><p></p></li>
+                <li class="bq2">退款、退换货、查看美团券</li>
+                <li class="bq4"><a href="#">参考教程，轻松搞定》</a></li>
+                <li class="bq5">客服电话：400-660-5335</li>
+                <li>服务时间：每天9：00-22:00</li>
+           </ul>
+        </div>
+        <div class="bw">©2014美团网团购 meitian.com 京IPC认证070791号 京公网安备11010502025545号 电子公告服务规则</div>
+        <div class="be"></div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
