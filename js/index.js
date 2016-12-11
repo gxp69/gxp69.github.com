@@ -59,7 +59,6 @@ $(function(){
     function getDir(obj,ev){
         var x = $(obj).offset().left + $(obj).outerWidth()/2 - ev.clientX;
         var y = $(obj).offset().top-$(document).scrollTop() + $(obj).outerHeight()/2 - ev.clientY;
-        document.title=x+'/'+$(obj).offset().top+'/'+y;
         return Math.round((Math.atan2(y,x)*180/Math.PI+180)/90)%4;
     }
     function through(obj){
@@ -94,7 +93,7 @@ $(function(){
                     break;
             }
             $(oLi).stop().animate({left:0,top:0});
-            $(oImg).stop().animate({width:320,height:213,marginLeft:-10,marginTop:-5})
+            $(oImg).stop().animate({width:320,height:213,marginLeft:-10,marginTop:-5},50)
         });
         $(obj).mouseleave(function(ev){
             var dir = getDir(obj,ev);
@@ -111,7 +110,7 @@ $(function(){
                 case 3:
                     $(oLi).stop().animate({left:0,top:-200});
             }
-            $(oImg).stop().animate({width:300,height:200,marginLeft:0,marginTop:0})
+            $(oImg).stop().animate({width:300,height:200,marginLeft:0,marginTop:0},50)
         });
     }
     $('.index_js_list ul li').each(function(index,ele){
