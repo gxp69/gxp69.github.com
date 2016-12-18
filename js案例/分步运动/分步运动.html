@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{ background:url(img3/0.jpg) no-repeat; width:700px; height:400px; margin:50px auto; position:relative; }
+    </style>
+    <script src="js/move.js"></script>
+    <script>
+        window.onload=function (){
+            var oBtn=document.getElementById('btn');
+            var oBox=document.getElementById('box');
+
+            var R=4;
+            var C=7;
+
+            for(var r=0; r<R; r++){
+                for(var c=0; c<C; c++){
+                    var oS=document.createElement('span');
+                    oS.style.width=oBox.offsetWidth/C+'px';
+                    oS.style.height=oBox.offsetHeight/R+'px';
+                    oBox.appendChild(oS);
+                    oS.style.position='absolute';
+                    oS.style.left=c*oS.offsetWidth+'px';
+                    oS.style.top=r*oS.offsetHeight+'px';
+                    oS.style.background='url(img3/0.jpg) no-repeat -'+c*oS.offsetWidth+'px -'+r*oS.offsetHeight+'px';
+
+                    oS.c=c;
+                    oS.r=r;
+                }
+            }
+
+            var aS=oBox.children;
+            var iNow=0;
+            var bOk=false;
+
+            oBtn.onclick = function(){
+                if(bOk)return;
+                bOk = true;
+                for(var i=0; i<aS.length; i++){
+                    (function(index){
+                        if(iNow%3==2){
+                            oBox.style.backgroundImage = 'url(img3/0.jpg)';
+                        }else{
+                            oBox.style.backgroundImage= 'url(img3/'+(iNow%3+1)+'.jpg)';
+                        }
+                        setTimeout(function(){
+                            aS[index].style.backgroundImage='url(img3/'+iNow%3+'.jpg)';
+                            aS[index].style.opacity = 0;
+                            move(aS[index],{opacity:1},{complete:function(){
+                                if(index==aS.length-1){
+                                    bOk=false;
+                                }
+                            }})
+                        },100*(aS[i].c+aS[i].r))
+                    })(i);
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="走一个" id="btn" />
+    <div id="box"></div>
+</body>
+</html>

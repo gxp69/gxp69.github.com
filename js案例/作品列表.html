@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding:0;  list-style:none;}
+        ul{
+            width: 366px;
+            margin: 100px auto;
+        }
+        li{
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            float: left;
+            margin:10px;
+            border: 1px solid #000;
+            text-align:center;
+            line-height:100px;
+            font-size:40px;
+        }
+    </style>
+    <script src="../js/move.js"></script>
+    <script>
+        window.onload = function(){
+            var oBtn = document.getElementById('btn1');
+            var aLi = document.getElementsByTagName('li');
+            var aPos = [];
+            for(var i = 0; i < aLi.length; i++){
+                aPos[i] = {
+                    left:aLi[i].offsetLeft,
+                    top:aLi[i].offsetTop
+                }
+            }
+            for(var i = 0; i < aPos.length; i++){
+                aLi[i].style.position = 'absolute';
+                aLi[i].style.left = aPos[i].left + 'px';
+                aLi[i].style.top =  aPos[i].top + 'px';
+                aLi[i].style.margin = 0;
+            }
+            var bOver  = true;
+            var timer = null;
+            oBtn.onclick = function(){
+                if(!bOver){return;}
+                bOver = false;
+                var iNow = 0;
+                timer = setInterval(function(){
+                    (function(index){
+                        move(aLi[iNow],{width:0,height:0,opacity:0,left:0,top:0},{complete:function(){
+                            if(index==(aLi.length-1)){
+                                for(var i = 0; i < aLi.length; i++){
+                                    aLi[i].style.background = 'rgb('+ parseInt(Math.random()*256) +','+ parseInt(Math.random()*256) +','+ parseInt(Math.random()*256) +')';
+                                }
+                                iNow = aLi.length - 1;
+                                timer = setInterval(function(){
+                                    (function(index){
+                                        move(aLi[iNow],{width:100,height:100,opacity:1,left:aPos[iNow].left,top:aPos[iNow].top},{complete:function(){
+                                            if(index==0){
+                                                bOver = true;
+                                            }
+                                        }})
+                                    })(iNow);
+                                    iNow--;
+                                    if(iNow < 0){
+                                        clearInterval(timer);
+                                    }
+                                },300)
+                            }
+                        }})
+                    })(iNow);
+                    iNow++;
+                    if(iNow >= aLi.length){
+                        clearInterval(timer);
+                    }
+                },300)
+
+            };
+        };
+    </script>
+</head>
+<body>
+<input type="button" value="换一页" id="btn1">
+<ul>
+    <li>一</li>
+    <li>二</li>
+    <li>三</li>
+    <li>四</li>
+    <li>五</li>
+    <li>六</li>
+    <li>七</li>
+    <li>八</li>
+    <li>九</li>
+</ul>
+</body>
+</html>

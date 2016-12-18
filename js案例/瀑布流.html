@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;list-style:none;}
+        ul{
+            width: 200px;
+            border:1px solid #000;
+            float:left;
+            margin:10px;
+        }
+        li{
+            width: 180px;
+            height: 200px;
+            background: red;
+            margin:10px;
+        }
+    </style>
+    <script>
+        function rnd(n,m){
+            return parseInt(Math.random()*(m-n)) + n;
+        }
+        window.onload = function(){
+            var aUl = document.getElementsByTagName('ul');
+            function createLI(){
+                var oLi = document.createElement('li');
+                oLi.style.height = rnd(100,500) + 'px';
+                oLi.style.background = 'rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+                return oLi;
+            }
+            function createLI20(){
+                for(var i = 0; i < 20; i++ ){
+                    var oLi = createLI();
+                    var arrUl = [];
+                    for(var j = 0; j < aUl.length; j++){
+                        arrUl.push(aUl[j]);
+                    }
+                    arrUl.sort(function(n1,n2){
+                        return n1.offsetHeight - n2.offsetHeight;
+                    });
+                    arrUl[0].appendChild(oLi)
+                }
+            }
+            createLI20();
+            window.onscroll = function(){
+                var clientH = document.documentElement.clientHeight;
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                var clientBottom  = clientH + scrollTop;
+                var pageHeight = document.documentElement.scrollHeight;
+                if((pageHeight - 400) < clientBottom){
+                    createLI20();
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+<ul>
+</ul>
+<ul></ul>
+<ul></ul>
+</body>
+</html>
