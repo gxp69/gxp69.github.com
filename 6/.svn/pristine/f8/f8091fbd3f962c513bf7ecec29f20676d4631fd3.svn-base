@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<link href="css/base.css" rel="stylesheet" />
+<link href="css/swiper.min.css" rel="stylesheet" />
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/xia.css">
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/xia.js"></script>
+    <script>
+    </script>
+</head>
+<body>
+    <div class="l_nav clearfix" id="shou">
+    	大数医达
+        <span class="fl btn"></span>
+    </div>
+    <div class="box">
+         	<img src="images/banner.jpg" alt="" />
+            <p class="p1">人工智能一小步，</p>
+            <p class="p2">医疗健康</p>
+            <p class="p3">一大步</p>
+    </div>
+    <div class="l_about">
+    	<span class="t1">01</span>
+        <span class="t2">关于我们</span>
+        <span class="line"></span>
+        <p class="text">北京大数医达科技有限公司是一家在人工智能、大数据、云计算方面拥有国际领先水平的高科技企业，专注于多源异构医疗数据处理、深度挖掘与机器学习。</p>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<div class="svg-css"><img src="images/elite.svg"/></div>
+                <p class="pic-title">顶尖团队</p>
+                <p class="pic-eng">Elite<br>team</p>
+			</div>
+            <div class="swiper-slide">
+                <div class="svg-css"><img src="images/medical.svg"/></div>
+                <p class="pic-title">医学专家</p>
+                <p class="pic-eng">Medical<br>experts</p>
+			</div>
+            <div class="swiper-slide">
+            	<div class="svg-css"><img src="images/leading.svg" /></div>
+                <p class="pic-title">国际领先</p>
+                <p class="pic-eng">Leading<br>international</p>
+			</div>
+            <div class="swiper-slide">
+            	<div class="svg-css"><img src="images/bigData.svg" /></div>
+                <p class="pic-title">大数据</p>
+                <p class="pic-eng">big<br>data</p>
+            </div>
+            <div class="swiper-slide">
+            	<div class="svg-css"><img src="images/ais.svg" /></div>
+                <p class="pic-title">人工智能</p>
+                <p class="pic-eng">Artificial<br>intelligence</p>
+
+            </div>
+            <div class="swiper-slide"> 
+            	<div class="svg-css"><img src="images/cloud.svg"/></div>
+                <p class="pic-title">云计算</p>
+                <p class="pic-eng">Cloud<br>computing</p>
+			</div>
+            <div class="swiper-slide">
+            	<div class="svg-css"><img src="images/acs.svg"/></div>
+                <p class="pic-title">实战派</p>
+                <p class="pic-eng">Actual<br>combat</p>
+			</div>
+        </div>
+        <!-- Add Scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <div class="warper">
+        <div class="g_two">
+            <h2><i>02</i>团队领袖-邓侃CTO</h2>
+            <div class="g_deco"></div>
+            <p>团队领袖邓侃是互联网领域著名技术专家，师从大数据科学创始人--美国卡内基梅隆大学（CMU）计算机学院院长，Ardrew Moore教授：专业从事机械学习和数据挖掘，曾Oracle主任架构师、百度搜索高级技术总监等职务。</p>
+        </div>
+        <div class="g_three g_two">
+            <h2><i>03</i>我们的愿望</h2>
+            <div class="g_deco"></div>
+            <p> 大数医达拥有自主知识产权的医疗大数据系统，该系统把超大规模的云计算系统，深度学习和数据挖掘等大数据算法，应用到医疗领域，自动化、智能化融汇多源异构的医疗数据，把自然语言的非结构化病历，自动转化为结构化的病历，从中挖掘出医生的临床诊断和治疗经验，主力医疗大数据产业发展，促进医疗卫生健康事业进步，服务社会，造福人类。</p>
+            <div class="g_video">
+                <img class="g_pic" src="images/bg.jpg" alt=""/>
+                <img class="g_vip" src="images/video.png" alt="">
+                <video controls poster="images/bg.jpg">
+                    <source src="hd.mp4" type="video/mp4">
+                    您的浏览器不支持video标签
+                </video>
+            </div>
+
+        </div>
+        <div class="g_four g_two" id="lianxi">
+            <h2><i>04</i>联系我们</h2>
+            <div class="g_deco"></div>
+            <p>地址：北京市海淀区东北旺西路8号中关村软件园一期3号楼3B区1206室</p>
+            <p>公司邮箱：service@iyoudoctor.com</p>
+            <p>公司网址：www.iyoudoctor.com</p>
+        </div>
+        <iframe src="html/baidu-map.html" frameborder="0" style="border:0" scrolling="no"></iframe>
+        <div class="g_end">京ICP备16013105号-1</div>
+    </div>
+
+    <div class="l_big">
+    	 <div class="box2">
+    		大数医达
+        	<span class="btn2"></span>
+    	</div>
+    	<div class="back"></div>
+        <div class="box1">
+            <ul>
+                <li><a href="#shou">首页</a></li>
+                <li><a href="product.html">产品介绍</a></li>
+                <li><a href="#lianxi">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

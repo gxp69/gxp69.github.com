@@ -1,0 +1,41 @@
+
+body{max-width: 3.75rem;}
+.w{margin:0 auto;}
+.h_red{font-size:0.23rem;color:red;}
+.h_white{font-size:0.23rem;color:white;}
+.h_b{border-bottom:0.04rem solid red;width:0.4rem;
+       display: block;margin:0.08rem 0 0.15rem 0.62rem;}
+
+/*  ------two------  */
+.h_two{width:3.75rem}
+.h_two h3{font-size:0.23rem;padding-left:0.275rem;margin-top:0.38rem;}
+.h_two p{font-size:0.15rem;margin-left:0.65rem;
+        padding-right:0.69rem;}
+/*  ------three------  */
+.h_three{background:black;width:3.75rem}
+.h_three .h_b{border-bottom:0.04rem solid white;}
+.h_three h3{font-size:0.23rem;padding-left:0.275rem;color: white;
+    padding-top:0.38rem; margin-top:0.38rem;}
+.h_three p{font-size:0.15rem;color:#fff;padding-left:0.65rem;
+        padding-right:0.69rem;}
+.vedios {
+    margin: 0 0.275rem;
+    padding: 0.34rem 0;
+}
+.vedio {
+    height: 10%;
+    margin: 0rem auto;
+    background: #72af87;
+    display: block;
+    width: 100%;
+}
+
+/*  ------four------  */
+.h_four h3{font-size:0.23rem;padding-left:0.275rem;margin-top:0.38rem;}
+.h_four ul{font-size:0.15rem;width:2.6rem;color:#fff;padding-left:0.65rem;
+        padding-right:0.69rem;margin-bottom:0.2rem;}
+.h_four img{width:3.75rem;}
+
+/*  ------foot------  */
+.h_foot{text-align: center;width: 3.75rem;}
+.h_foot p{font-size:0.13rem;color:#999;}
