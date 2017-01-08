@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{ margin:0; padding:0; list-style:none; }
+        li{ width:12.5%; height:200px; border:1px solid #000; float:left; margin-left:-2px; }
+        li.on{ background:#ccc; }
+    </style>
+    <script src="sound.js"></script>
+    <script>
+        window.onload=function(){
+            var aLi=document.querySelectorAll('li');
+
+            for(var i=0; i<aLi.length; i++){
+                aLi[i].dataset.index=i;
+                aLi[i].onmousedown=function(){
+                    this.className='on';
+                    var oA= new Audio();
+                    oA.src=oggSound['sound'+(parseInt(this.dataset.index)+49)];
+                    oA.play();
+                };
+                aLi[i].onmouseup=function(){
+                    this.className='';
+                };
+            }
+            document.onkeydown=function(ev){
+                if(ev.keyCode>=49&&ev.keyCode<=56){
+                    aLi[ev.keyCode-49].className='on';
+                    var oA= new Audio();
+                    oA.src=oggSound['sound'+ev.keyCode];
+                    oA.play();
+                }
+            };
+            document.onkeyup=function(ev){
+                if(ev.keyCode>=49&&ev.keyCode<=56){
+                    aLi[ev.keyCode-49].className='';
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

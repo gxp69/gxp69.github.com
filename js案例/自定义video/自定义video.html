@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        video{ width:600px; }
+        meter{ width:600px; height:30px; }
+    </style>
+    <script>
+        window.onload=function(){
+            var aBtn=document.querySelectorAll('input');
+            var oV=document.querySelector('video');
+            var oM=document.querySelector('meter');
+            aBtn[0].onclick=function(){
+                oV.play();
+            };
+
+            aBtn[1].onclick=function(){
+                oV.pause();
+            };
+
+            aBtn[2].onclick=function(){
+                oV.currentTime++;
+            };
+            aBtn[3].onclick=function(){
+                oV.currentTime--;
+            };
+            aBtn[4].onclick=function(){
+                oV.volume+=0.1;
+            };
+            aBtn[5].onclick=function(){
+                oV.volume-=0.1;
+            };
+            aBtn[6].onclick=function(){
+                oV.muted=!oV.muted;
+            };
+            aBtn[7].onclick=function(){
+                oV.webkitRequestFullscreen();
+            };
+            oV.ontimeupdate=function(){
+                var scale=oV.currentTime/oV.duration;
+                oM.value=scale*100;
+            };
+
+            oM.onmousedown=function(ev){
+                var disX=ev.pageX-oM.value/100*600;
+                document.onmousemove=function(ev){
+                    var x=ev.pageX-disX;
+                    var scale=x/600;
+                    oM.value=scale*100;
+                    oV.currentTime=scale*oV.duration;
+                };
+                document.onmouseup=function(){
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                };
+                return false;
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="播放" />
+    <input type="button" value="暂停" />
+    <input type="button" value="快进" />
+    <input type="button" value="快退" />
+    <input type="button" value="音量+" />
+    <input type="button" value="音量-" />
+    <input type="button" value="静音" />
+    <input type="button" value="全屏" /><br />
+    <meter max="100" value="0"></meter><br />
+    <video src="video/2.mp4" controls></video>
+</body>
+</html>

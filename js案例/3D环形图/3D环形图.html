@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:#000;
+            overflow:hidden;
+        }
+        ul{
+            width:133px;
+            height:200px;
+            position:relative;
+            left:0;
+            top:0;
+            margin:100px auto;
+            transform:perspective(800px) rotateX(-10deg);
+            transform-style:preserve-3d;
+        }
+        li{
+            position:absolute;
+            width:100%;
+            height:100%;
+        }
+        img{
+            border-radius: 4px;
+            box-shadow:0 0 5px #fff;
+            -webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0) 70%,rgba(0,0,0,1));
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oUl=document.querySelector('ul');
+            var aLi=oUl.children;
+
+            for(var i=0; i<aLi.length; i++){
+                aLi[i].style.transition='1s all ease '+(aLi.length-i)*100+'ms';
+                aLi[i].style.transform='rotateY('+360/aLi.length*i+'deg) translateZ(300px)';
+            }
+            var x=0;
+            var y=0;
+            var iSpeedX=0;
+            var iSpeedY=0;
+            var lastX=0;
+            var lastY=0;
+
+            oUl.onmousedown=function (ev){
+                var disX=ev.pageX-x;
+                var disY=ev.pageY-y;
+                document.onmousemove=function (ev){
+                    x=ev.pageX-disX;
+                    y=ev.pageY-disY;
+
+                    oUl.style.transform='perspective(800px) rotateX('+((-y)/5-10)+'deg) rotateY('+(x)/5+'deg)';
+
+                    iSpeedX=ev.pageX-lastX;
+                    iSpeedY=ev.pageY-lastY;
+
+                    lastX=ev.pageX;
+                    lastY=ev.pageY;
+
+                };
+                document.onmouseup=function (){
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+
+                    oUl.timer=setInterval(function (){
+                        iSpeedX*=0.8;
+                        iSpeedY*=0.8;
+
+                        x+=iSpeedX;
+                        y+=iSpeedY;
+
+                        oUl.style.transform='perspective(800px) rotateX('+((-y)/5-10)+'deg) rotateY('+(x)/5+'deg)';
+
+                        if(Math.abs(iSpeedX)<1)iSpeedX=0;
+                        if(Math.abs(iSpeedY)<1)iSpeedY=0;
+                        if(iSpeedX==0&&iSpeedY==0){
+                            clearInterval(oUl.timer);
+                        }
+                    },16);
+                };
+                return false;
+            };
+        };
+    </script>
+</head>
+<body>
+      <ul>
+          <li>
+              <img src="img2/1.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/2.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/3.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/4.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/5.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/6.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/7.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/8.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/9.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/10.jpg" alt="">
+          </li>
+          <li>
+              <img src="img2/11.jpg" alt="">
+          </li>
+      </ul>
+</body>
+</html>

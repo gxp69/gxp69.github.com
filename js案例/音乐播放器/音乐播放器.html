@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a.on{ background:url(play.gif) no-repeat right; padding-right:40px; }
+    </style>
+    <script>
+        function rnd(n,m){
+            return Math.floor(Math.random()*(m-n)+n);
+        }
+        window.onload=function(){
+            var aA=document.querySelectorAll('a');
+            var oA=document.querySelector('audio');
+            var aBtn=document.querySelectorAll('input');
+            var iNow=0;
+            for(var i=0; i<aA.length; i++){
+                aA[i].index=i;
+                aA[i].ondblclick=function(){
+                    iNow=this.index;
+                    play();
+                };
+            }
+            function play(){
+                for(var i=0; i<aA.length; i++){
+                    aA[i].className='';
+                }
+                aA[iNow].className='on';
+                oA.src='mp3/'+aA[iNow].innerHTML+'.mp3';
+                oA.play();
+            }
+            aBtn[0].onclick=function(){
+                oA.playState=1;
+            };
+            aBtn[1].onclick=function(){
+                oA.playState=2;
+            };
+            aBtn[2].onclick=function(){
+                oA.playState=3;
+            };
+            aBtn[3].onclick=function(){
+                oA.playState=4;
+            };
+            oA.onended=function(){
+                switch(oA.playState){
+                    case 1:
+                        oA.play();
+                        break;
+                    case 2:
+                        iNow++;
+                        if(iNow>=aA.length){
+                            iNow=aA.length-1;
+                            return;
+                        }
+                        play();
+                        break;
+                    case 3:
+                        var item=0;
+                        while(item==iNow){
+                            item=rnd(0,aA.length);
+                            //console.log(item+'-'+iNow);
+                        }
+                        iNow=item;
+                        play();
+                        break;
+                    case 4:
+                        iNow++;
+                        iNow%=aA.length;
+                        play();
+                        break;
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="单曲循环" />
+    <input type="button" value="顺序播放" />
+    <input type="button" value="随机播放" />
+    <input type="button" value="列表循环" />
+    <br />
+    <audio controls></audio>
+    <ul>
+        <li><a href="javascript:;">千千阙歌</a></li>
+        <li><a href="javascript:;">时间都去哪儿了</a></li>
+        <li><a href="javascript:;">小苹果</a></li>
+        <li><a href="javascript:;">夜的钢琴曲</a></li>
+        <li><a href="javascript:;">雨的印记</a></li>
+    </ul>
+</body>
+</html>

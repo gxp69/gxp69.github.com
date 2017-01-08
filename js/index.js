@@ -3,41 +3,6 @@
  */
 'use strict';
 $(function(){
-    //黑客
-    (function(){
-        var matrix=document.getElementById("matrix");
-
-        var timer=null;
-
-        var context=matrix.getContext("2d");
-        matrix.height=window.innerHeight;
-        matrix.width=window.innerWidth;
-        var drop=[];
-        var font_size=16;
-        var columns=matrix.width/font_size;
-        for(var i=0;i<columns;i++)
-            drop[i]=1;
-
-        function drawMatrix(){
-            context.fillStyle="rgba(0, 0, 0, 0.1)";
-            context.fillRect(0,0,matrix.width,matrix.height);
-
-            context.fillStyle="green";
-            context.font=font_size+"px";
-            for(var i=0;i<columns;i++){
-                context.fillText(Math.floor(Math.random()*2),i*font_size,drop[i]*font_size);/*get 0 and 1*/
-
-                if(drop[i]*font_size>(matrix.height*2/3)&&Math.random()>0.85)/*reset*/
-                    drop[i]=0;
-                drop[i]++;
-            }
-        }
-        timer=setInterval(drawMatrix,30);
-        setTimeout(function(){
-            clearInterval(timer);
-            $(matrix).css({display:'none'});
-        },3000)
-    })();
     //菜单
     (function(){
         var oNav=document.getElementById('navigation');
@@ -264,6 +229,115 @@ $(function(){
             }
             next();
         }
+    })();
+    //简介swiper
+    (function(){
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            effect: 'cube',//切换效果‘方块’
+            grabCursor: true,//小手
+            cube: {
+                shadow: true,//开启投影。默认 true。
+                slideShadows: true,//开启slide阴影。默认 true。
+                shadowOffset: 20,//投影距离。默认 20，单位px。
+                shadowScale: 0.94//投影缩放比例。默认0.94。
+            }
+        });
+    })();
+    //画布
+    (function(){
+        var oC=$('canvas')[0];
+        var winW=$(window).width();
+        var winH=$(window).height();
+        oC.width=winW;
+        oC.height=winH;
+        oC.style.zIndex='2';
+        var gd=oC.getContext('2d');
+
+        function drawPoint(x,y,r){
+            gd.beginPath();
+            gd.fillStyle='rgba(255,255,255,1)';
+            gd.arc(x,y,r,d2a(0),d2a(360),false);
+            gd.fill();
+        }
+        //创建
+        var all=[];
+        setInterval(function(){
+            var N=20;
+            var aPoint=[];
+            for(var i=0; i<N; i++){
+                var x=rnd(0,winW);
+                var r=rnd(1,5);
+                var iSpeedY=Math.random()*(0.5-0.1)+0.1;
+                var y=0;
+                aPoint[i]={
+                    x:x,
+                    r:r,
+                    s:iSpeedY,
+                    y:y
+                };
+                drawPoint(x,y,r);
+            }
+            all.push(aPoint);
+            if(all.length>20){
+                all.shift();
+            }
+        },1000);
+
+        //运动
+
+        setInterval(function(){
+            gd.clearRect(0,0,winW,winH);
+            for(var j=0; j<all.length; j++){
+                for(var i=0; i<all[j].length; i++){
+                    var opacity=j/all.length;
+                    all[j][i].y+=all[j][i].s;
+                    gd.beginPath();
+                    gd.fillStyle='rgba(255,255,255,'+opacity+')';
+                    gd.arc(all[j][i].x,all[j][i].y,all[j][i].r,d2a(0),d2a(360),false);
+                    gd.fill();
+                }
+            }
+
+
+        },16)
+    })();
+    //返回顶部
+    (function(){
+        var oTop=$('.back-top');
+        $(window).on('risize scroll load',function(){
+            if($(document).scrollTop()>0){
+                oTop.css({
+                    opacity:1
+                });
+                oTop.on('transitionend',end);
+            }else if($(document).scrollTop()==0){
+                oTop.css({
+                    transition:'.5s all ease',
+                    opacity:0
+                });
+                oTop.on('transitionend',end);
+            }
+        });
+
+        function end(){
+            oTop.css({
+                transition:'none'
+            });
+            oTop.off('transitionend',end,false);
+        }
+        var timer=null;
+        oTop.click(function(){
+            timer=setInterval(function(){
+                var oT=$(window).scrollTop();
+                $(window).scrollTop(oT-15);
+                if(oT<=0){
+                    $(window).scrollTop(0);
+                    clearInterval(timer);
+                }
+            },16);
+
+        })
     })();
 
 

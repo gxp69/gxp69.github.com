@@ -110,8 +110,12 @@ function getPos(obj){
     }
     return {left:l,top:t};
 }
-
-
+function d2a(n){
+    return n/180*Math.PI;
+}
+function a2d(n){
+    return n*180/Math.PI;
+}
 
 
 
