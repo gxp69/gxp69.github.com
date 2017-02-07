@@ -1,0 +1,125 @@
+.warper{
+    width:1200px;
+}
+.nav{
+    padding-top:15px;
+}
+.nav .logo{
+    margin-bottom:19px;
+}
+.nav .logo a{
+    display: block;
+    width:326px;
+    height:66px;
+    background: url("../images/logo-g.png") no-repeat;
+    text-indent:-999999em;
+}
+.footer-container{
+    background:#fff;
+    height:90px;
+    text-align: center;
+    line-height:90px;
+}
+.copyright{
+    color:#999;
+}
+.container{
+    width:100%;
+    height:560px;
+    background: url("../images/ban.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.container .container_n{
+    height:560px;
+}
+.container .container_n img{
+    float:left;
+    margin-top:70px;
+}
+.container .container_n .loading{
+    width:260px;
+    height:300px;
+    background: #fff;
+    float:right;
+    margin-top:90px;
+    margin-right:10px;
+    padding:30px 40px 0 40px;
+    text-align: center;
+}
+.container .loading h2{
+    font-size:20px;
+    color:#333;
+    margin-bottom:10px;
+}
+.container .loading p{
+    width:257px;
+    height:24px;
+    line-height:24px;
+    font-size:12px;
+    color:#FB0303;
+    background: #fff6d2;
+    border:1px solid #ffe57d;
+    margin-bottom:9px;
+    opacity:0;
+    filter:alpha(opacity:0);
+}
+.username{
+    width:257px;
+    height:34px;
+    border:1px solid #ccc;
+    margin-bottom:20px;
+    position:relative;
+}
+.username i{
+    float:left;
+    width:31px;
+    height:34px;
+    background: url("../images/username.jpg");
+    border-right:1px solid #ccc;
+}
+.username input{
+    float:left;
+    border: 0;
+    width:225px;
+    height:34px;
+    font-size:14px;
+}
+.username span{
+    position:absolute;
+    top:8px;
+    left:36px;
+    color:#ccc;
+}
+.password{
+    border:1px solid #c0ddfb;
+    margin-bottom:24px;
+}
+.password i{
+    background: url("../images/password.jpg");
+    border-right:1px solid #c0ddfb;
+}
+.check{
+    text-align: left;
+    color:#666;
+    margin-bottom:16px;
+}
+.check span{
+    float:right;
+}
+.check input{
+    vertical-align: middle;
+    margin-right:5px;
+}
+.btn{
+    width:260px;
+    height:36px;
+    background: #3e7ee7;
+    color:#fff;
+    border: 0;
+    font-size:16px;
+    margin-bottom:10px;
+}
+.forget a{
+    float:right;
+    line-height:14px;
+}

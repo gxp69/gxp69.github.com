@@ -1,0 +1,289 @@
+/*头部*/
+.box{
+    width: 100%;
+}
+.box .header{
+    width: 1201px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.header .logo{
+    width: 326px;
+    display: block;
+}
+.header .logo h1{
+    width: 326px;
+    height: 66px;
+    background: url("../images/logo.jpg") no-repeat;
+    text-indent: -999em;
+}
+.header ul{
+    margin-top: 29px;
+}
+.header li{
+    padding-right: 40px;
+}
+.header a{
+    font-size: 16px;
+}
+/**/
+/*.header a:hover{
+    color: #0b95ed;
+}*/
+/**/
+.header li .sc{
+    color: #0b95ed;
+}
+.header .last_li{
+    padding-right: 0;
+}
+.header .last{
+    padding-right:30px;
+    background: url("../images/down.jpg") no-repeat 80px 10px;
+}
+/*banner*/
+.box .banner{
+    margin-bottom:64px;
+}
+.box .banner img{
+    width: 100%;
+}
+/*内容*/
+/*标题01*/
+.box .content{
+    width: 100%;
+}
+.box .content .content_cp{
+    width: 1201px;
+    margin: 0 auto;
+}
+.box .content_cp .bt{
+    margin-bottom: 50px;
+}
+.content_cp .xt_left,.xt_right{
+    width: 420px;
+    border: 1px solid #cccccc;
+    margin-top: 16px;
+}
+.content_cp .bt .xt_left{
+    margin-left: 98px;
+}
+.content_cp .bt .btnr{
+    margin:0 20px;
+    text-align: center;
+
+}
+.content_cp .bt h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+.content_cp .bt span{
+    font-size: 10px;
+    color: #747474;
+}
+/*内容01*/
+.content_cp .nw li{
+    width: 260px;
+    margin-right: 54px;
+}
+.content_cp .nw ul{
+    margin-bottom:80px;
+}
+.content_cp .nw .last{
+    width: 260px;
+    margin-right:-10px;
+}
+.content_cp li .show{
+    width: 260px;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+.content_cp .show .po{
+    width: 520px;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.content_cp li h4{
+    font-size: 18px;
+    font-weight:bold;
+    padding-top: 21px;
+    margin-bottom: 19px;
+}
+.content_cp li p{
+    font-size: 13px;
+    line-height: 21px;
+    color: #747474;
+}
+/*内容02*/
+/*标题02*/
+.box .content02{
+    width: 100%;
+    background: #fafafa;
+}
+.box .content02 .content_xz{
+    width: 1201px;
+    margin: 0 auto;
+}
+.content02 .content_xz .bt02{
+    padding-left: 428px;
+    padding-top: 64px;
+    margin-bottom:70px;
+}
+.content_xz h4,span{
+    font-size: 29px;
+    font-weight:bold;
+}
+.content_xz h4 span{
+    color: #0b95ed;
+}
+/*内容02*/
+.content02 ul li{
+    width: 228px;
+    height: 428px;
+    border: 1px solid #e7e8e9;
+    margin-right:14px;
+    position: relative;
+}
+.content02 .nw02 ul{
+    padding-bottom:80px;
+}
+.content02 .nw02 .last{
+    margin-right:-10px;
+}
+/*js*/
+.content02 .nw02 .xs{
+    width: 230px;
+    height: 458px;
+    position: absolute;
+    left:0;
+    top:-70px;
+    overflow: hidden;
+}
+.content02 .nw02 .yd{
+    width: 230px;
+    height: 428px;
+    position: absolute;
+    left: 0;
+    top: 70px;
+}
+/*js*/
+.content02 .nw02 img{
+    margin-left:15px;
+    margin-top: 40px;
+}
+.content02 .kj {
+    width: 180px;
+    margin-left: 25px;
+    margin-top: 100px;
+}
+.content02 .kj p{
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.content02 .kj span{
+    font-size: 12px;
+    line-height: 24px;
+    color: #747474;
+}
+/*内容03*/
+.box .content03{
+    width: 1201px;
+    margin: 0 auto;
+    margin-top: 96px;
+    margin-bottom: 120px;
+}
+.content03 img{
+    width: 650px;
+    height: 380px;
+}
+.content03 .cright{
+    padding-left: 96px;
+    padding-top: 93px;
+}
+.content03 .cright span{
+    font-size: 19px;
+}
+.content03 .cright h2 {
+    font-size: 29px;
+    font-weight:bold;
+    color: #2281ef;
+    line-height: 41px;
+    padding-top: 31px;
+    padding-bottom: 36px;
+}
+.content03 .cright .btn{
+    width: 260px;
+    height: 64px;
+    background: url("../images/nniu.png") no-repeat;
+}
+/*尾部*/
+.box .footer{
+    width: 100%;
+    background: #212425;
+}
+.footer .footer_c{
+    width: 1201px;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+.footer ul{
+    padding:0 48px 0 154px;
+}
+.footer li{
+    border-right:1px solid #7e7e7e;
+}
+.footer li a{
+    font-size: 13px;
+    color: #ffffff;
+    padding: 0 15px;
+    line-height: 13px;
+}
+.footer .footer_top span{
+    font-size: 18px;
+    padding-left:45px;
+    background: url("../images/iphon.png")no-repeat 0 0;
+    color:#ffffff;
+}
+.footer .footer_con{
+    width: 1070px;
+    margin-left:67px;
+    border: 1px solid #7e7e7e;
+    margin-top: 14px;
+    margin-bottom: 15px;
+}
+.footer .footer_bottom{
+    font-size: 13px;
+    color: #7e7e7e;
+    text-align: center;
+    display: block;
+    padding-bottom: 58px;
+}
+.active{
+    color:#0b95ed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

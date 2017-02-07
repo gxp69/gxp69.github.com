@@ -1,0 +1,219 @@
+/*头部*/
+.box{
+    width: 100%;
+}
+.box .header{
+    width: 1201px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.header .logo{
+    width: 326px;
+    display: block;
+}
+.header .logo h1{
+    width: 326px;
+    height: 66px;
+    background: url("../images/logo.jpg") no-repeat;
+    text-indent: -999em;
+}
+.header ul{
+    margin-top: 29px;
+}
+.header li{
+    padding-right: 40px;
+}
+.header a{
+    font-size: 16px;
+}
+.header .last_li{
+    padding-right: 0;
+}
+.header .last{
+    padding-right:30px;
+    background: url("../images/down.jpg") no-repeat 80px 10px;
+}
+.header li .sc{
+    color: #0b95ed;
+}
+/*banner*/
+.box .banner{
+    width: 100%;
+    margin-bottom:64px;
+    position: relative;
+}
+.box .banner a{
+    background: url("../images/nniu2.png")no-repeat;
+    width: 260px;
+    height: 67px;
+    display: block;
+    position: absolute;
+    left: 355px;
+    top:374px;
+}
+/*内容*/
+/*标题01*/
+.box .content{
+    width: 1201px;
+    margin: 0 auto;
+}
+.box .content .content_cp{
+    margin-bottom:50px;
+}
+.box .content_cp .bt{
+    margin-bottom: 50px;
+}
+.content_cp .xt_left,.xt_right{
+    width: 420px;
+    border: 1px solid #cccccc;
+    margin-top: 16px;
+}
+.content_cp .bt .xt_left{
+    margin-left: 98px;
+}
+.content_cp .bt .btnr{
+    margin:0 20px;
+    text-align: center;
+
+}
+.content_cp .bt h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+.content_cp .bt span{
+    font-size: 10px;
+    color: #747474;
+    text-transform: uppercase;
+}
+/*内文*/
+.content .content_nw{
+    margin-bottom:94px;
+}
+.content .content_nw p{
+    padding-left: 51px;
+    padding-top: 126px;
+    padding-right: 106px;
+    width: 576px;
+}
+.content .content_nw span{
+    background: url("../images/n1.png")no-repeat;
+    width: 398px;
+    height: 330px;
+}
+/*内文02*/
+.content .content_nw02{
+    margin-bottom:60px;
+}
+.content .content_nw02 span{
+    background: url("../images/n2.png")no-repeat;
+    padding-left: 51px;
+    width: 383px;
+    height: 358px;
+    padding-right: 138px;
+}
+/*公用*/
+.content h5{
+    font-size: 19px;
+    font-weight:bold;
+    padding-bottom: 15px;
+}
+.content .content_nw02 h5{
+    padding-top:119px;
+
+}
+/*公用*/
+.content p{
+    font-size: 14px;
+    line-height: 27px;
+    color: #666666;
+}
+.content .content_nw02 p{
+    width: 545px;
+}
+/*内文03*/
+.content .content_nw03{
+    padding-bottom: 95px;
+}
+.content .content_nw03 h5 {
+    padding-top: 100px;
+}
+.content .content_nw03 p{
+    padding-right: 77px;
+}
+.content .content_nw03 span{
+    background: url("../images/n3.png")no-repeat;
+    width: 369px;
+    height: 333px;
+}
+.content a{
+    background: url("../images/anniu1.jpg")no-repeat;
+    width: 260px;
+    height: 56px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 94px;
+}
+/*尾部*/
+.box .footer{
+    width: 100%;
+    background: #212425;
+}
+.footer .footer_c{
+    width: 1201px;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+.footer ul{
+    padding:0 48px 0 154px;
+}
+.footer li{
+    border-right:1px solid #7e7e7e;
+}
+.footer li a{
+    font-size: 13px;
+    color: #ffffff;
+    padding: 0 15px;
+    line-height: 13px;
+}
+.footer .footer_top span{
+    font-size: 18px;
+    padding-left:45px;
+    background: url("../images/iphon.png")no-repeat 0 0;
+    color:#ffffff;
+}
+.footer .footer_con{
+    width: 1070px;
+    margin-left:67px;
+    border: 1px solid #7e7e7e;
+    margin-top: 14px;
+    margin-bottom: 15px;
+}
+.footer .footer_bottom{
+    font-size: 13px;
+    color: #7e7e7e;
+    text-align: center;
+    display: block;
+    padding-bottom: 58px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+﻿
+
+21号上午    需求分析，分配工作
+
+21号下午    把主页和分页做好静态页，并加上小效果
+
+22号上午    把主页上的js效果加上
+
+22号下午    完成注册和登陆页面，并交互测试
+
+23号        跨域获取数据
+
+主要问题：
+        1.加js效果时与css冲突，出现各种问题，修改css
+        2.jquery跨域：
+            $.ajax({
+                    url:"http://boss.shopcmd.com/boss/website/websiteCase.do",
+                    data:"site=3&_=1482457578576",
+                    dataType: 'jsonp',
+                    success:function(data){
+                        console.log(data);
+                    }
+                });
