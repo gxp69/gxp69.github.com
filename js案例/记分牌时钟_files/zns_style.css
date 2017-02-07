@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-body{background:black}
+body{background:#000;}
 #div1 {text-align:center; margin-top:150px;}
 #div1 .box {margin:0 2px;}
 
