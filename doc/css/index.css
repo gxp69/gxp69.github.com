@@ -1,0 +1,173 @@
+/*****Basic Element*****/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{
+    margin:0;padding:0;font-family: "微软雅黑", "黑体"; font-weight:normal;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+img {
+    border: none;
+}
+html{
+    font-size: 100px;
+}
+body {
+}
+input {
+    box-sizing:border-box;
+}
+/*****Generic Classes*****/
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.hidden {
+    display:none;
+}
+/*****头部*****/
+.z_header{
+    height: 0.45rem;
+    background: #000;
+    text-align: center;
+    position: relative;
+    z-index:999;
+}
+.z_header #z_menu,.z_header #z_close{
+    display: block;
+    width: 0.25rem;
+    position: absolute;
+    top:0.14rem;
+    left: 0.25rem;
+    font-size: 0;
+}
+.z_header #z_close{
+    display: none;
+}
+.z_header #z_menu img,.z_header #z_close img{
+    width: 100%;
+}
+.z_header h1 {
+    font-size: 0.17rem;
+    color: #fff;
+    line-height: 0.45rem;
+}
+/*****弹出层*****/
+#z_nav {
+    display: none;
+    background:black;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:99;
+    font-size: 0;
+    text-align: center;
+}
+#z_nav .z_menu {
+    position: relative;
+}
+
+#z_nav ul {
+    padding-top: 0.6rem;
+    background:black;
+}
+#z_nav li {
+    border-bottom: 1px #fff solid;
+    margin: 0 0.3rem;
+    line-height: 0.5rem;
+}
+#z_nav li a {
+    font-size: 0.12rem;
+    color: #fff;
+}
+/*****产品展示*****/
+.z_banner {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: 0.32rem;
+    color: #fff;
+    background: url("../images/banner2.jpg") no-repeat center top;
+    background-size: cover;
+}
+/*****联动tab*****/
+.z_tab {
+    padding: 0.35rem 0 0.55rem;
+}
+.z_tab li{
+    width: 25%;
+    text-align: center;
+    font-size: 0;
+}
+.z_tab li p {
+    font-size: 0.12rem;
+    line-height: 0.18rem;
+    padding-top: 0.15rem;
+}
+.active {
+    color: red;
+}
+.active .intr-svg .st0 {
+    fill:#e20d22
+}
+.intr-svg {
+    width: 0.5rem;
+    height: 0.4rem;
+}
+/*.z_tab .active svg {
+    color: red;
+}*/
+.swiper-container {
+    width: 100%;
+    margin:0 auto;
+    padding-bottom: 0.45rem;
+}
+.swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    width: 100%;
+    text-align: left;
+
+}
+.swiper-slide:nth-child(2n) {
+    width: 40%;
+}
+.swiper-slide:nth-child(3n) {
+    width: 20%;
+}
+.swiper-slide h2 {
+    font-weight: bold;
+    font-size: 0.23rem;
+    color: #e30b20;
+    border-left: 0.04rem solid #e30b20;
+    margin:0 0 0.45rem 0.27rem;
+    padding-left: 0.15rem;
+}
+.swiper-slide .z_content {
+    padding:0 0.45rem;
+    font-size: 0.14rem;
+    line-height: 0.25rem;
+
+}
+.swiper-slide .z_content img {
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+

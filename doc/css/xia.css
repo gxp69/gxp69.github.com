@@ -1,0 +1,251 @@
+html{
+    font-size:100px;
+}
+/*shang----------------------------------------------*/
+.l_nav{
+    width:3.75rem;
+    height:0.44rem;
+    background: black;
+    font-size:0.15rem;
+    color:#fff;
+    text-align:center;
+    line-height:0.44rem;
+	text-indent:-0.3rem;
+
+}
+.l_nav .btn{
+    width:0.23rem;
+    height:0.16rem;
+    margin-left:0.27rem;
+    margin-top:0.15rem;
+    background:url(../images/nav.jpg) no-repeat;
+}
+.box{
+    position:relative;
+    margin-bottom:0.46rem
+}
+.box img{
+    width:3.75rem;
+    height:4rem;
+	display:block;
+}
+.box .p1{
+    position:absolute;
+    left:0.35rem;
+    top:1.8rem;
+    font-size:0.17rem;
+    color:#fff;
+}
+.box .p2{
+    position:absolute;
+    left:0.35rem;
+    top:2.2rem;
+    font-size:0.34rem;
+    color:#fff;
+    background:red;
+}
+.box .p3{
+    position:absolute;
+    left:1.8rem;
+    top:2.2rem;
+    font-size:0.34rem;
+    color:#fff;
+}
+.l_about{
+    width:3.75rem;
+    height:2.07rem;
+}
+.l_about .t1{
+    font-size:0.25rem;
+    color:red;
+    margin-left:0.22rem;
+}
+.l_about .t2{
+    font-size:0.26rem;
+    color:black;
+    margin-left:0.1rem;
+}
+.l_about .line{
+    display:block;
+    width:0.43rem;
+    height:0.04rem;
+    background:red;
+    margin:0.05rem 0 0.19rem 0.59rem;
+}
+.l_about .text{
+    width:2.39rem;
+    font-size:0.14rem;
+    line-height:0.24rem;
+    color:#373332;
+    margin:0 0.55rem;
+}
+.swiper-container{
+    width:3.75rem;
+    height:2rem;
+    background:#fafafa;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 0.14rem;
+    width: 1.37rem;
+
+}
+.swiper-slide img{
+    width:0.6rem;
+    height:0.45rem;
+    margin:0.43rem 0 0.28rem 0.4rem;
+}
+.swiper-slide .pic-title{
+    font-size:0.14rem;
+	font-family:'楷体';
+    color:#000;
+}
+.swiper-slide .pic-eng{
+    font-size:0.1rem;
+    color:#989898;
+}
+.l_big{
+    display:none;
+}
+.l_big .box2{
+    width:3.75rem;
+    height:0.44rem;
+    background: black;
+    font-size:0.2rem;
+    color:#fff;
+    text-align:center;
+    line-height:0.44rem;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999999;
+}
+.l_big .box2 .btn2{
+    position:absolute;
+    left:0;
+    top:0;
+    width:0.8rem;
+    height:0.8rem;
+    margin-left:0.12rem;
+    margin-top:0.02rem;
+    background:url(../images/1.jpg) no-repeat;
+}
+.l_big .back{
+    position: fixed;
+    top: 0rem;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+}
+.l_big .box1{
+    position:fixed;
+    width:100%;
+    z-index:999;
+    top:0.01rem;
+}
+.l_big .box1 ul{
+    margin-top:1rem;
+    padding:0 0.3rem;
+}
+.l_big .box1 ul li{
+    text-align:center;
+    border-bottom: 1px #fff solid;
+}
+.l_big .box1 ul li a{
+    color: #fff;
+    margin: 0 1rem;
+    line-height: 0.6rem;
+    font-size: 0.15rem;
+}
+/*xia--------------------------------------------------------*/
+.warper{
+    width:3.75rem;
+}
+.g_two{
+    padding-top:0.29rem;
+}
+.g_two h2{
+    font-size:0.2rem;
+    color:#333;
+    margin-left:0.28rem;
+    margin-bottom:0.16rem;
+}
+.g_two h2 i{
+    font-size:0.2rem;
+    color:#e91e32;
+    margin-right:0.14rem;
+}
+.g_two .g_deco{
+    width:0.43rem;
+    height:0.04rem;
+    background:#fe0000;
+    margin-left:0.72rem;
+    margin-bottom:0.21rem;
+}
+.g_two p{
+    font-size:0.14rem;
+    color:#373332;
+    line-height:0.24rem;
+    width:2.4rem;
+    margin-left:0.66rem;
+    margin-bottom:0.32rem;
+}
+.g_three{
+    background:#29282e;
+    color:#fff;
+    padding-bottom:0.23rem;
+}
+.g_three h2{
+    color:#fff;
+}
+.g_three p{
+    color:#fff;
+}
+.g_three h2 i{
+    color:#fff;
+}
+.g_three .g_deco{
+    background:#fff;
+}
+.g_three .g_video{
+    width:3.2rem;
+    height:2.04rem;
+    position:relative;
+    margin-left:0.28rem;
+}
+.g_three .g_vip{
+    position:absolute;
+    width:0.62rem;
+    height:0.62rem;
+    z-index: 2;
+    top:50%;
+    left:50%;
+    margin-left:-0.31rem;
+    margin-top:-0.31rem;
+}
+.g_three .g_pic{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+.g_three .g_video video{
+    width:100%;
+    height:100%;
+}
+.g_four p{
+    margin-bottom:0.1rem;
+}
+iframe{
+    width:3.75rem;
+    height:1.21rem;
+}
+.g_end{
+    height:0.34rem;
+    width:100%;
+    text-align:center;
+    font-size:0.13rem;
+    color:#999;
+}
