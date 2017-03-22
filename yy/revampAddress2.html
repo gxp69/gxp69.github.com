@@ -1,0 +1,182 @@
+<!doctype html>
+<html class="no-js">
+		<head>
+		  <meta charset="utf-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  	<meta name="description" content="">
+		  <meta name="keywords" content="">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <meta name="renderer" content="webkit">
+		  <meta http-equiv="Cache-Control" content="no-siteapp" />
+		  <title>新增收货地址</title>
+		  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="js/jquery-1.7.min.js"></script> 
+      
+		</head>
+		<body>
+			
+			  <header data-am-widget="header" class="am-header am-header-default header-h2">
+			   
+			 	    <a href="revampAddress.html"><div class="revamp-break">取消</div></a>
+			
+					<h1 class="am-header-title color-black">新增收货地址</h1>
+					
+					<a><div class="revamp-add">保存</div></a>
+			
+			</header>
+			
+			<div class="ra2-input ra2-input-text">
+				
+				<input type="text" placeholder="收货人"/>
+				<div aria-hidden="true" class="icon-newspaper xiugai" data-icon="&#xe900;"></div>
+			
+			</div>
+			<div class="ra2-input ra2-input-text">
+				
+				<input type="text" placeholder="身份证"/>
+				<div aria-hidden="true" class="icon-newspaper xiugai" data-icon="&#xe900;"></div>
+				
+			</div>
+			<div class="ra2-input ra2-input-text">
+				
+				<input type="text" placeholder="手机号码"/>
+				<div aria-hidden="true" class="icon-newspaper xiugai" data-icon="&#xe900;"></div>
+				
+			</div>
+			<div class="ra2-input ra2-input-text">
+				
+				<input type="text" placeholder="邮政编码(可不填)"/>
+				<div aria-hidden="true" class="icon-newspaper xiugai" data-icon="&#xe900;"></div>
+				
+			</div>
+			<div class="ra2-input ra2-input-text">
+				
+				<input type="text" placeholder="详细地址"/>
+				<div aria-hidden="true" class="icon-newspaper xiugai" data-icon="&#xe900;"></div>
+				
+			</div>
+			<div class="ra2-input ra2-input-button">
+				
+				<input type="button" value="设置为默认收货地址" />
+				
+			</div>
+			
+			
+	  </body>
+	  
+	  <script>
+	  
+	      $(function(){
+	      	
+	      	 $(".ra2-input-text >div").click(function(){
+	      	 	
+	      	 	 $(this).prev("input").val("");
+	      	 	
+	      	 })
+	      	 
+	      	 /*设置为默认收货地址所在的按钮触发的点击事件*/
+	      	 $(".ra2-input-button input").click(function(){
+	      	 	
+	      	 	
+	      	 	 if(1==2){
+	      	 	 	 
+	      	 	 	 yuwqPrompt("已设为默认收货地址");
+	      	 	 	
+	      	 	 }else{
+	      	 	 	
+	      	 	 	yuwqPrompt("请先保存该收货地址");
+	      	 	 	
+	      	 	 }
+	      	 	 
+	      	 	
+	      	 })
+	      	 
+	      	 /*保存按钮的点击事件*/
+	      	 $(".revamp-add").click(function(){
+	      	 	
+	      	 	 
+	      	 	 /*获取需要提交的表单数据*/
+	      	 	 var _data01 = $(".ra2-input-text:eq(0) input").val();/*收货人*/
+	      	 	 var _data02 = $(".ra2-input-text:eq(1) input").val();/*身份证*/
+	      	 	 var _data03 = $(".ra2-input-text:eq(2) input").val();/*手机号码*/
+	      	 	 var _data04 = $(".ra2-input-text:eq(3) input").val();/*邮政编码*/
+	      	 	 var _data05 = $(".ra2-input-text:eq(4) input").val();/*详细地址*/
+	      	 	 
+	      	 	 /*为这些数据设置正则表达式*/
+	      	 	var _regular01 = /^/;/*收货人的正则表达式，2-16位字符即可*/
+	      	 	var _regular02 = /^(\d{6})(\d{4})(\d{2})(\d{2})(\d{3})([0-9]|X)$/;/*身份证的正则表达式*/
+	      	 	var _regular03 = /^(1(([35][0-9])|(47)|[8][0126789]))\d{8}$/;/*手机号码的正则表达式*/
+	      	 	var _regular04 = /^[1-9]\d{5}$/;/*邮政编码的正则表达式*/
+	      	 	var _regular05 = /^/;/*详细地址的正则表达式，50个字符长度以内，自己酌情考虑*/
+	      	 	
+	      	 	
+	      	 	/*==========================================================================
+	      	 	 * 
+	      	 	 * 逻辑上请自行处理，表达式和数据获取我已经帮你实现了，靠你了！记得做非空处理！
+	      	 	 * 还有我自己写了一个提示框的方法，就在下面，记得用
+	      	 	 * 
+	      	 	 *==========================================================================*/
+	      	 	
+	      	 	 
+	      	 	 if(1==2){
+	      	 	 	 
+	      	 	 	 yuwqPrompt("已设为默认收货地址");
+	      	 	 	
+	      	 	 }else{
+	      	 	 	
+	      	 	 	yuwqPrompt("请先保存该收货地址");
+	      	 	 	
+	      	 	 }
+	      	 	 
+	      	 	
+	      	 })
+	      	 
+	      	 
+	      	  /*提示框方法*/
+		  	  function yuwqPrompt(textVal){
+		  	  	
+		  	  	    /*用js方式生成手机端提示*/
+	  	  	    	if($(".yuwq-prompt").length){
+	  	  	    	
+	  	  	    	   $(".yuwq-prompt").remove();	
+	  	  	    		
+	  	  	    	}else{
+	  	  	    		
+	  	  	    	}
+	  	  	    	/*$("body").find(".yuwq-prompt").romeve();*/
+	  	  	    	
+	  	  	    	clearTimeout(A);
+	  	  	    	clearTimeout(B);
+	  	  	    	
+	  	  	    	$("body").append("<div class='yuwq-prompt'>"+textVal+"</div>");
+	  	  	    	
+	  	  	    	  
+	  	  	    	$(".yuwq-prompt").fadeIn(500);
+	  	  	    	
+	  	  	    	var A = setTimeout(function(){
+	  	  	    		
+	  	  	    		$(".yuwq-prompt").fadeOut(500);
+	  	  	    		
+	  	  	    	},1000);
+	  	  	    	
+	  	  	    	var B = setTimeout(function(){
+	  	  	    		
+	  	  	    		$(".yuwq-prompt").remove();	
+	  	  	    		
+	  	  	    	},2000); 	  	   
+		  	  	
+		  	  }
+	      	   
+	      	
+	      })
+	      
+	      
+	     
+	  
+	  </script>
+	  
+	  
+</html>

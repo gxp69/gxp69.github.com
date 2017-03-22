@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>一元夺宝</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-1.7.min.js"></script> 
+  <script src="js/main.js"></script>   
+</head>
+<html>
+<body style="background-color: #fff;">
+<!-- Header -->
+
+<header data-am-widget="header" class="am-header am-header-default header-h2">
+           <div class="am-header-left am-header-nav">
+             <a href="Announced.html" class="am-font">
+                  <div class="am_brack"></div>         
+             </a>           
+           </div>
+
+<h1 class="am-header-title">
+                    清单
+           </h1>
+
+</header>
+
+<div class="commer-ad"> 
+    <article class="am-comment comment-artic yuwq-artic" style="padding:10px;"> <!-- 评论容器 -->
+      <a href="" class="am-comment-avatar2">
+        <img  src="images/ban2.png" alt=""/> <!-- 评论者头像 -->
+      </a>
+      <div class="am-comment-main2"> <!-- 评论内容容器 -->
+              <h4 class="font-h4">Apple iPhone6s Plus 64G 颜色随机</h4>
+              <p class="sp-font">总需7280人次，剩余<span >1205</span>人次</p>
+              <p>
+              	<span  class="sp2-font">参与人次  </span>
+              
+                  <div class="d-stock">
+                  <a class="decrease">-</a>
+                    <input id="num" readonly="" class="text_box" name="" type="text" value="1">
+                    <input id="id" type="hidden" value="2">
+                    <a class="increase">+</a>
+                   <span id="dprice" class="price" style="display:none"> 36</span>
+                  </div>   
+            </p>        
+      </div>
+    </article>
+    
+    <article class="am-comment comment-artic yuwq-artic" style="padding:10px;"> <!-- 评论容器 -->
+      <a href="" class="am-comment-avatar2">
+        <img  src="images/ban2.png" alt=""/> <!-- 评论者头像 -->
+      </a>
+      <div class="am-comment-main2"> <!-- 评论内容容器 -->
+              <h4 class="font-h4">Apple iPhone6s Plus 64G 颜色随机</h4>
+              <p class="sp-font">总需7280人次，剩余<span >1205</span>人次</p>
+              <p>
+              	<span  class="sp2-font">参与人次  </span>
+              
+                  <div class="d-stock">
+                  <a class="decrease">-</a>
+                    <input id="num" readonly="" class="text_box" name="" type="text" value="1">
+                    <input id="id" type="hidden" value="2">
+                    <a class="increase">+</a>
+                   <span id="dprice" class="price" style="display:none"> 36</span>
+                  </div>   
+            </p>        
+      </div>
+    </article>
+    
+</div>
+<script>
+	//购物数量加减
+	$(function(){
+		$('.increase').click(function(){
+			var self = $(this);
+			var current_num = parseInt(self.siblings('input').val());
+			current_num += 1;
+			self.siblings('input').val(current_num);
+			update_item(self.siblings('input').data('item-id'));
+		})		
+		$('.decrease').click(function(){
+			var self = $(this);
+			var current_num = parseInt(self.siblings('input').val());
+			if(current_num > 1){
+				current_num -= 1;
+				self.siblings('input').val(current_num);
+				update_item(self.siblings('input').data('item-id'));
+			}
+		})
+	})
+</script>
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default am-nabr-div">
+  <div class="am-navbar-nav am-cf am-avg-sm-5 am-avg-div">
+  
+  <div class="am-div-1">
+      <p class="am-dm-font">共1件商品，总计：<span>1</span>元</p>
+      <p class="duo">夺宝有风险，参与需谨慎</p>
+  </div>
+   <button type="button" class="am-btn am-btn-danger font-li"><a href="Confirmorder.html">结算</a></button>
+
+
+  </div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+</body>
+</html>

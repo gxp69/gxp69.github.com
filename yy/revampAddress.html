@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js">
+		<head>
+		  <meta charset="utf-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  	<meta name="description" content="">
+		  <meta name="keywords" content="">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <meta name="renderer" content="webkit">
+		  <meta http-equiv="Cache-Control" content="no-siteapp" />
+		  <title>修改收货地址</title>
+		  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+      <link rel="stylesheet" href="css/style.css">
+      
+		</head>
+		<body>
+			
+			<header data-am-widget="header" class="am-header am-header-default header-h2">
+			   
+			 	    <a href="Settings.html"><div class="revamp-break">取消</div></a>
+			
+					<h1 class="am-header-title color-black">管理收货地址</h1>
+					
+					<a href="revampAddress2.html"><div class="revamp-add">新增</div></a>
+			
+			</header>
+			
+			
+			<!--收货地址列表，默认收货只有一个，这个逻辑请自行处理-->
+			
+			<div class="ra-receipt-info">
+				<a href="revampAddress3.html">
+					<div>
+						<div>谜一样的男子</div><!--收货人姓名-->				
+						<div>18870836264</div><!--收货人电话-->
+						<div><span>[默认]</span><font>青云谱区龙王庙市场233号</font></div><!--收货人地址-->
+					</div>	
+				</a>
+			    <a href=""><img class="ra-receipt-info-remove" src="images/yuwq-remove-1.png"/></a><!--删除-->
+			</div>
+			
+			
+			<div class="ra-receipt-info">
+				<a href="revampAddress3.html">
+					<div>
+						<div>谜一样的男子</div><!--收货人姓名-->				
+						<div>18870836264</div><!--收货人电话-->
+						<div><span>[默认]</span><font>青云谱区龙王庙市场233号</font></div><!--收货人地址-->
+					</div>	
+				</a>
+			    <a href=""><img class="ra-receipt-info-remove" src="images/yuwq-remove-1.png"/></a><!--删除-->
+			</div>
+			
+			<div class="ra-receipt-info">
+				<a href="revampAddress3.html">
+					<div>
+						<div>谜一样的男子</div><!--收货人姓名-->				
+						<div>18870836264</div><!--收货人电话-->
+						<div><font>青云谱区龙王庙市场233号金悦凯庭</font></div><!--收货人地址-->
+					</div>	
+				</a>
+			    <a href=""><img class="ra-receipt-info-remove" src="images/yuwq-remove-1.png"/></a><!--删除-->
+			</div>
+			
+			
+			
+	  </body>
+	  
+	  <script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/amazeui.min.js"></script>
+		
+		<script>
+			
+			 $(function(){
+
+						
+				/*防止事件冒泡到DOM树上，也就是不触发的任何前辈元素上的事件处理函数。*/
+				 
+				 $(".ra-receipt-info-remove").click(function(event){
+				    event.stopPropagation();    // do something
+				  });  
+						 	
+			 })
+			
+		</script>
+			  
+</html>

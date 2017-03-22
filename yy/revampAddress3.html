@@ -1,0 +1,226 @@
+<!doctype html>
+<html class="no-js">
+		<head>
+		  <meta charset="utf-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  	<meta name="description" content="">
+		  <meta name="keywords" content="">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <meta name="renderer" content="webkit">
+		  <meta http-equiv="Cache-Control" content="no-siteapp" />
+		  <title>修改收货地址</title>
+		  <link rel="icon" type="image/png" href="__STATIC__wap/assets/i/favicon.png">
+  <link rel="stylesheet" href="__STATIC__wap/assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="__STATIC__wap/assets/css/app.css">
+      <link rel="stylesheet" href="__STATIC__wap/css/style.css">
+      <script src="__STATIC__wap/js/jquery-1.7.min.js"></script> 
+      
+		</head>
+		<body>
+			
+			  <header data-am-widget="header" class="am-header am-header-default header-h2">
+			   
+			 	    <a href="revampAddress.html"><div class="revamp-break">取消</div></a>
+			
+					<h1 class="am-header-title color-black">修改收货地址</h1>
+					
+					<div class="revamp-add" id="bt">保存</div>
+			
+			</header>
+			
+			<div class="ra2-input ra2-input-text">
+				
+				<input type="text"  name="shperson"  id="shperson"  placeholder="收货人"/>
+				<div id="i1"  class=""></div>
+			
+			</div>
+			<div class="ra2-input ra2-input-text">
+				
+				<input type="text"  name="mobile" id="mobile"  placeholder="手机号码"/>
+				<div id="i2"  class=""></div>
+				
+			</div>
+			<div class="ra2-input ra2-input-text">
+				
+				<input type="text" name="zip_code" id="zip_code"  placeholder="邮政编码"/>
+				<div id="i3"  class=""></div>
+				
+			</div>
+			<div class="ra2-input ra2-input-text">
+				
+				<input type="text" name="address" id="address"  placeholder="详细地址"/>
+				<div id="i4"  class=""></div>
+				
+			</div>
+			<div class="ra2-input ra2-input-button">
+				
+				<input type="button"  value="设置为默认收货地址" />
+				
+			</div>
+			
+			
+	  </body>
+	  
+	  <script>
+	 
+	      	  /*提示框方法*/
+		  	  function yuwqPrompt(textVal){
+		  	  	
+		  	  	    /*用js方式生成手机端提示*/
+	  	  	    	if($(".yuwq-prompt").length){
+	  	  	    	
+	  	  	    	   $(".yuwq-prompt").remove();	
+	  	  	    		
+	  	  	    	}else{
+	  	  	    		
+	  	  	    	}
+	  	  	    	/*$("body").find(".yuwq-prompt").romeve();*/
+	  	  	    	
+	  	  	    	clearTimeout(A);
+	  	  	    	clearTimeout(B);
+	  	  	    	
+	  	  	    	$("body").append("<div class='yuwq-prompt'>"+textVal+"</div>");
+	  	  	    	
+	  	  	    	  
+	  	  	    	$(".yuwq-prompt").fadeIn(500);
+	  	  	    	
+	  	  	    	var A = setTimeout(function(){
+	  	  	    		
+	  	  	    		$(".yuwq-prompt").fadeOut(500);
+	  	  	    		
+	  	  	    	},1000);
+	  	  	    	
+	  	  	    	var B = setTimeout(function(){
+	  	  	    		
+	  	  	    		$(".yuwq-prompt").remove();	
+	  	  	    		
+	  	  	    	},2000); 	  	   
+		  	  	
+		  	  }
+	      	   
+	      	
+	      })
+  var a=false;
+  var aa=false;
+  var aaa=false;
+  var aaaa=false;
+  var aaaaa=false;
+ //收货人焦点验证 
+$("#shperson").blur(function(){
+		  	var $shperson=$('input[name="shperson"]').val();
+   if($shperson==""){
+		  	var div = document.getElementById('i1'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-cuo");
+		    return false;
+		}else if(!(/^([\u4e00-\u9fa5]+|([a-zA-Z]+\s?)+){4,20}$/.test($shperson))){
+		  	var div = document.getElementById('i1'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-cuo"); 
+		    return false;
+		}else{
+			  var div = document.getElementById('i1'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-dui");  
+		    var b=true;
+		    a=b;
+		    
+		}
+});
+
+//手机焦点验证
+$("#mobile").blur(function(){
+		  	var $mobile=$('input[name="mobile"]').val();
+   if($mobile==""){
+		  	var div = document.getElementById('i2'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-cuo");
+		    return false;
+		}else if(!(/^(1(([35][0-9])|(47)|[8][0126789]))\d{8}$/.test($mobile))){
+		  	var div = document.getElementById('i2'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-cuo");
+		    return false;
+		}else{
+			  var div = document.getElementById('i2'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-dui");
+		    var b=true;
+		    aa=b;
+		}
+});
+
+//邮政焦点验证
+$("#zip_code").blur(function(){
+		  	var zip_code=$('input[name="zip_code"]').val();
+   if($zip_code==""){
+		  	var div = document.getElementById('i3'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-cuo");
+	      return false;
+		}else if(!(/^[1-9]\d{5}$/.test($zip_code))){
+		  	var div = document.getElementById('i3'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-cuo");
+		    return false;
+		}else{
+			  var div = document.getElementById('i3'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-dui");
+		    var b=true;
+		    aaa=b;
+		}
+});
+
+//详细地址焦点验证
+$("#address").blur(function(){
+		  	var $address=$('input[name="address"]').val();
+   if($address==""){
+		  	var div = document.getElementById('i4'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-cuo");
+		    return false;
+		}else if(!(/^{6,100}$/.test($address))){
+		  	var div = document.getElementById('i4'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-cuo");
+		    return false;
+		}else{
+			  var div = document.getElementById('i4'); 
+		    div.setAttribute("class", "yuwq-discern yuwq-dui");
+		    var b=true;
+		    aaaa=b; 
+		}
+});
+
+
+$("#bt").click(function(){
+	    var $shperson=$('input[name="shperson"]').val();
+	    var $mobile=$('input[name="mobile"]').val();
+	    var $zip_code=$('input[name="zip_code"]').val();
+	    var $address=$('input[name="address"]').val();
+	 if(a==true){
+	 	 if(aa==true){
+	 	   	if(aaa===true){
+				if(aaaa==true){	 	  	 
+ 	  	 	   	      $.ajax({
+					   	type:"POST",
+					   	url:"{:U('MemberWap/revampAddress3')}",
+					   	async:true,
+					   	data:"shperson="+$shperson+"&mobile="+$mobile+"&zip_code="+$zip_code+"&address="+$address,
+					   	success:function(b){
+							if(b == 0){
+							    yuwqPrompt("用户名已存在!");
+							}else  if(b==2){
+								  yuwqPrompt("身份证已存在!");
+							}else if(b==1){
+								  window.location.href="{:U('MemberWap/login')}";
+							}
+						}   			
+					 });	   	    	 
+				}else{
+				  yuwqPrompt("详细地址不正确!");
+				}
+           }else{
+         	 yuwqPrompt("邮政编码不正确!");
+           }	   		  
+        }else{
+      	  yuwqPrompt("手机号不正确!");
+        }
+	 }else{
+	   yuwqPrompt("收货人不正确!");
+	 }
+	
+});
+  
+ </script> 
+</html>

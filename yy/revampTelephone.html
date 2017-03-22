@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js">
+		<head>
+		  <meta charset="utf-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	      <meta name="description" content="">
+		  <meta name="keywords" content="">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <meta name="renderer" content="webkit">
+		  <meta http-equiv="Cache-Control" content="no-siteapp" />
+		  <title>修改手机号码</title>
+		  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+          <link rel="stylesheet" href="assets/css/amazeui.min.css">
+          <link rel="stylesheet" href="assets/css/app.css">
+          <link rel="stylesheet" href="css/style.css">
+          <script src="js/jquery-1.7.min.js"></script> 
+      
+		</head>
+		<body>
+			
+			  <header data-am-widget="header" class="am-header am-header-default header-h2">
+           
+		            <a href="Settings.html"><div class="revamp-break">取消</div></a>
+		
+		            <h1 class="am-header-title color-black">
+		                    修改手机号码
+		            </h1>
+		            
+		            <a><div class="revamp-add">保存</div></a>
+
+				</header>
+				
+				<div class="revampTelephone-input">
+					
+					<input type="text" placeholder="输入正确的手机号后发送验证请求"/>
+					
+					<div aria-hidden="true" class="icon-newspaper xiugai" data-icon="&#xe900;"></div>
+					
+				</div><!--修改昵称-->
+				
+				<div class="rt-Captcha">
+				
+				    <input type="text" class="Captcha-Import" placeholder="请在此处输入验证码"/><!--验证码输入-->
+				    <input type="button" class="Captcha-get" value="获取验证码"/><!--验证码获取-->
+				
+				</div><!--验证码-->
+			
+			
+			
+	  </body>
+	  
+	  <script>
+	  	
+	  	  $(function(){
+	  	  	
+	  	  	  $(".revampTelephone-input >div").click(function(){
+	  	  	  	
+	  	  	  	  $(".revampTelephone-input input").val("");
+	  	  	  	
+	  	  	  })
+	  	  	  
+	  	  	  $(".revampTelephone-input >div").click(function(){
+	  	  	  	
+	  	  	  	  $(".revampTelephone-input input").val("");
+	  	  	  	
+	  	  	  })
+	  	  	  
+	  	  	  
+	  	  	 /*单击保存事件*/
+	  	  	 $(".revamp-add").click(function(){
+	  	  	 	
+	  	  	 	/*获取手机号输入框的数值*/
+	  	  	    var _telephone = $(".revampTelephone-input input").val();
+	  	  	    
+	  	  	    var checkNum = /^(1(([35][0-9])|(47)|[8][0126789]))\d{8}$/;
+
+                /*手机号正则判断*/
+	  	  	    if(checkNum.test(_telephone)){
+	  	  	    	
+	  	  	    	/*alert("true");*/
+	  	  	    	
+	  	  	    }else{
+	  	  	    	
+	  	  	    	
+	  	  	    	yuwqPrompt("您输入的手机号格式不对！");
+	  	  	    	
+	  	  	    	
+	  	  	    }
+	  	  	 	
+	  	  	 })
+	  	  	
+	  	  })
+	  	  
+	  	  
+	  	  /*提示框方法*/
+	  	  function yuwqPrompt(textVal){
+	  	  	
+	  	  	    /*用js方式生成手机端提示*/
+  	  	    	if($(".yuwq-prompt").length){
+  	  	    	
+  	  	    	   $(".yuwq-prompt").remove();	
+  	  	    		
+  	  	    	}else{
+  	  	    		
+  	  	    	}
+  	  	    	/*$("body").find(".yuwq-prompt").romeve();*/
+  	  	    	
+  	  	    	clearTimeout(A);
+  	  	    	clearTimeout(B);
+  	  	    	
+  	  	    	$("body").append("<div class='yuwq-prompt'>"+textVal+"</div>");
+  	  	    	
+  	  	    	  
+  	  	    	$(".yuwq-prompt").fadeIn(500);
+  	  	    	
+  	  	    	var A = setTimeout(function(){
+  	  	    		
+  	  	    		$(".yuwq-prompt").fadeOut(500);
+  	  	    		
+  	  	    	},1000);
+  	  	    	
+  	  	    	var B = setTimeout(function(){
+  	  	    		
+  	  	    		$(".yuwq-prompt").remove();	
+  	  	    		
+  	  	    	},2000); 	  	   
+	  	  	
+	  	  }
+	  	
+	  </script>
+	  
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js">
+		<head>
+		  <meta charset="utf-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	      <meta name="description" content="">
+		  <meta name="keywords" content="">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <meta name="renderer" content="webkit">
+		  <meta http-equiv="Cache-Control" content="no-siteapp" />
+		  <title>修改昵称</title>
+		  <link rel="icon" type="image/png" href="__STATIC__assets/i/favicon.png">
+          <link rel="stylesheet" href="__STATIC__assets/css/amazeui.min.css">
+          <link rel="stylesheet" href="__STATIC__assets/css/app.css">
+          <link rel="stylesheet" href="__STATIC__css/style.css">
+          <script src="__STATIC__js/jquery-1.7.min.js"></script> 
+      
+		</head>
+		<body>
+			
+			  <header data-am-widget="header" class="am-header am-header-default header-h2">
+           
+		            <a href="Settings.html"><div class="revamp-break">取消</div></a>
+		
+		            <h1 class="am-header-title color-black">
+		                    修改昵称
+		            </h1>
+		            
+		            <a><div class="revamp-add">保存</div></a>
+
+				</header>
+				
+				<div class="revampName-input">
+					
+					<input type="text" placeholder="请输入昵称，2-20个合法字符"/>
+					
+					<div aria-hidden="true" class="icon-newspaper xiugai" data-icon="&#xe900;"></div>
+					
+				</div><!--修改昵称-->
+			
+			
+			
+	  </body>
+	  
+	  <script>
+	  	
+	  	  $(function(){
+	  	  	
+	  	  	  $(".revampName-input >div").click(function(){
+	  	  	  	
+	  	  	  	  $(".revampName-input input").val("");
+	  	  	  	
+	  	  	  })
+	  	  	  
+	  	  	     /*单击保存事件*/
+		  	  	 $(".revamp-add").click(function(){
+		  	  	 	
+		  	  	 	/*获取手机号输入框的数值*/
+		  	  	    var _rname = $(".revampName-input input").val();
+		  	  	    
+		  	  	    var checkNum = /^[a-z0-9_-]{2,20}$/;
+	
+	                /*手机号正则判断*/
+		  	  	    if(checkNum.test(_rname)){
+		  	  	    	
+		  	  	    	/*alert("true");*/
+		  	  	    	
+		  	  	    }else{
+		  	  	    	
+		  	  	    	
+		  	  	    	yuwqPrompt("您输入的昵称含有非法字符！");
+		  	  	    	
+		  	  	    	
+		  	  	    }
+		  	  	 	
+		  	  	 })
+	  	  	  
+	  	  	  /*提示框方法*/
+		  	  function yuwqPrompt(textVal){
+		  	  	
+		  	  	    /*用js方式生成手机端提示*/
+	  	  	    	if($(".yuwq-prompt").length){
+	  	  	    	
+	  	  	    	   $(".yuwq-prompt").remove();	
+	  	  	    		
+	  	  	    	}else{
+	  	  	    		
+	  	  	    	}
+	  	  	    	/*$("body").find(".yuwq-prompt").romeve();*/
+	  	  	    	
+	  	  	    	clearTimeout(A);
+	  	  	    	clearTimeout(B);
+	  	  	    	
+	  	  	    	$("body").append("<div class='yuwq-prompt'>"+textVal+"</div>");
+	  	  	    	
+	  	  	    	  
+	  	  	    	$(".yuwq-prompt").fadeIn(500);
+	  	  	    	
+	  	  	    	var A = setTimeout(function(){
+	  	  	    		
+	  	  	    		$(".yuwq-prompt").fadeOut(500);
+	  	  	    		
+	  	  	    	},1000);
+	  	  	    	
+	  	  	    	var B = setTimeout(function(){
+	  	  	    		
+	  	  	    		$(".yuwq-prompt").remove();	
+	  	  	    		
+	  	  	    	},2000); 	  	   
+		  	  
+		  	  }
+	  	  	
+	  	  })
+	  	
+	  </script>
+	  
+</html>

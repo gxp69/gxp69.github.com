@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>一元夺宝</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-1.7.min.js"></script> 
+  <script src="js/main.js"></script>   
+</head>
+<html>
+<body style="background:#fff;">
+<!-- Header -->
+
+<header data-am-widget="header" class="am-header am-header-default header-h2">
+           <div class="am-header-left am-header-nav">
+             <a href="index.html" class="am-font">
+                  <div class="am_brack"></div>                    
+             </a>           
+           </div>
+
+            <h1 class="am-header-title">
+                   注册
+            </h1>
+            
+<!--            <div class="am-header-right am-header-nav">
+              <a href="shousuo.html" class="">
+                  <img src="images/index-x-8.png" width="100%;">
+              </a>      
+           </div>-->
+
+</header>
+
+<div class="login-main">
+    <div class="login-list">
+        <ul>
+            <li class="yuwq-li yuwq-li-telephone">
+                <input type="password" name="password" id="password" placeholder="请输入手机号" class="am-form-field yuwq-telephone-text">
+                <div class="yuwq-discern yuwq-cuo" style="display: none;"></div>
+            </li>
+            
+            <li>
+            	
+                <input type="text" class="yuwq-verification-text-1" placeholder="输入验证码"/>
+                <input type="button" class="yuwq-verification-btn-1" value="获取验证码"/>
+                
+            </li>                                      
+            
+        </ul>
+
+
+        <div class="login-btn yuwq-next-btn">
+            <a href="register3.html" type="button" class="am-btn am-btn-danger am-btn-block am-bta" id="button">下一步</a>
+        </div>
+    
+    </div>
+
+
+
+
+</div>
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+	  	
+	  	  $(function(){
+	  	  	  
+	  	  	     /*输入手机号时进行判断*/
+	  	  	     $(".yuwq-telephone-text").keyup(function(){
+	  	  	     	
+	  	  	     	  var _teleNum = $(".yuwq-telephone-text").length;
+	  	  	     	  
+	  	  	     	  var _teleVal = $(".yuwq-telephone-text").val();
+	  	  	     	  
+	  	  	     	  if(_teleNum>0){
+	  	  	     	  	
+	  	  	     	  	   $(".yuwq-li-telephone .yuwq-discern").show();
+	  	  	     	  	
+	  	  	     	  }else{
+	  	  	     	  	
+	  	  	     	  	  $(".yuwq-li-telephone .yuwq-discern").hide();
+	  	  	     	  	
+	  	  	     	  }
+	  	  	     	  if(_teleVal=="222"){
+	  	  	     	  	
+	  	  	     	  	   
+	  	  	     	  	
+	  	  	     	  }
+	  	  	     	
+	  	  	     })
+	  	  	     
+	  	  	  
+	  	  	     /*单击验证事件*/
+		  	  	   $(".yuwq-verification-btn-1").click(function(){
+		  	  	 	
+		  	  	 	/*获取手机号输入框的数值*/
+		  	  	    var _rname = $(".yuwq-verification-btn-1").val();
+		  	  	    
+		  	  	    var checkNum = /^[a-z0-9_-]{2,20}$/;
+	
+	                /*手机号正则判断*/
+		  	  	    if(checkNum.test(_rname)){
+		  	  	    	
+		  	  	    	/*alert("true");*/
+		  	  	    	
+		  	  	    }else{
+		  	  	    	
+		  	  	    	
+		  	  	    	yuwqPrompt("每60秒获取验证码一次");
+		  	  	    	
+		  	  	    	
+		  	  	    }
+		  	  	 	
+		  	  	 })
+	  	  	  
+	  	  	  /*提示框方法*/
+		  	  function yuwqPrompt(textVal){
+		  	  	
+		  	  	    /*用js方式生成手机端提示*/
+	  	  	    	if($(".yuwq-prompt").length){
+	  	  	    	
+	  	  	    	   $(".yuwq-prompt").remove();	
+	  	  	    		
+	  	  	    	}else{
+	  	  	    		
+	  	  	    	}
+	  	  	    	/*$("body").find(".yuwq-prompt").romeve();*/
+	  	  	    	
+	  	  	    	clearTimeout(A);
+	  	  	    	clearTimeout(B);
+	  	  	    	
+	  	  	    	$("body").append("<div class='yuwq-prompt'>"+textVal+"</div>");
+	  	  	    	
+	  	  	    	  
+	  	  	    	$(".yuwq-prompt").fadeIn(500);
+	  	  	    	
+	  	  	    	var A = setTimeout(function(){
+	  	  	    		
+	  	  	    		$(".yuwq-prompt").fadeOut(500);
+	  	  	    		
+	  	  	    	},1000);
+	  	  	    	
+	  	  	    	var B = setTimeout(function(){
+	  	  	    		
+	  	  	    		$(".yuwq-prompt").remove();	
+	  	  	    		
+	  	  	    	},2000); 	  	   
+		  	  	
+		  	  }
+	  	  	
+	  	  })
+	  	
+	  </script>
+</body>
+</html>
